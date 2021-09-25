@@ -1,7 +1,6 @@
 import React, {useCallback, useContext, useEffect, useReducer} from 'react';
 import {useHttp, useWindowDimensions} from "../../../hooks";
 import {AuthContext} from "../../../context/AuthContext";
-import { config } from "react-spring";
 import {MyServiceIcon} from "../../../components/custom/MyServiceIcon";
 import {Col, Container, Row} from "react-bootstrap";
 import DividerLine from "../../../components/custom/DividerLine";
@@ -29,7 +28,7 @@ const MainPage = () => {
             data: [],
             goToSlide: 0,
             offsetRadius: 1,
-            config: config.gentle
+            // config: config.gentle
         }
     );
 
