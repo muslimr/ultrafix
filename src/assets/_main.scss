@@ -1,0 +1,321 @@
+
+.nums-box {
+  width: 380px;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  padding: 10px 25px;
+  font-weight: 500;
+  color: #776490;
+  border-radius: 0 0 10px 10px;
+  //background: linear-gradient(90deg, rgba(124, 105, 150, 0) 0%, rgba(124, 105, 150, 0.1) 46.35%, rgba(124, 105, 150, 0) 100%);
+  background: rgba(124, 105, 150, 0.1) 46.35%;
+}
+
+.MuiButton-label {
+  svg {
+    position: fixed;
+    //top: 0;
+    font-size: 2.5rem;
+    padding: 0;
+    color: #838383;
+  }
+}
+
+.logo_ {
+  .img_ {
+    position: absolute;
+    width: 200px;
+    margin-left: 70px;
+    margin-top: 20px;
+    z-index: 5;
+  }
+}
+
+.slogan_ {
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .h1_ {
+    font-size: 35px;
+    font-weight: 300;
+    color: #776490;
+    text-align: center;
+  }
+}
+
+.q_buttons {
+  display: flex;
+  margin: 3rem 0 1rem 0;
+}
+
+
+@media (max-width: 1200px) {
+  .logo_ {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .img_ {
+      position: relative !important;
+      width: 300px;
+      margin-left: 0;
+      margin-top: 70px;
+    }
+
+    .back_icon {
+      display: none !important;
+    }
+  }
+
+  .slogan_ {
+    margin-top: 10px;
+    width: 100%;
+
+    img {
+      position: relative;
+    }
+
+    .h1_ {
+      font-size: 27px;
+    }
+  }
+
+
+  .q_buttons {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    button {
+      width: 100% !important;
+      font-size: 17px;
+      margin: .6rem 0;
+    }
+
+    .buta-btn {
+      width: 100% !important;
+      font-size: 18px;
+      margin: .6rem 0;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .bm_buttons {
+    //margin-top: 3rem;
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .slogan_ {
+    margin-top: -250px;
+
+    .h1_ {
+      font-size: 17px;
+    }
+  }
+
+  .bm_buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.2rem;
+
+    .back {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      margin: 0 30px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 500rem;
+      background-color: #8F73B6;
+      transition: all .3s ease;
+
+      img {
+        width: 1.5rem;
+        transition: all .3s ease;
+      }
+
+      &:first-child {
+        img {
+          width: 1.7rem !important;
+        }
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: #a57cde;
+
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+  }
+
+
+}
+
+
+.service-box-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+
+  .service-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 209px;
+    height: 209px;
+    margin: 0 30px;
+    background: #FFFFFF;
+    border: 1px solid #EFF2F4;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.07);
+    border-radius: 113px;
+    transition: 0.1s ease-in;
+    cursor: pointer;
+
+    .service-icon {
+      width: 100px;
+      //font-size: 100px;
+      color: #7c91a7;
+
+      //@media (max-width: 768px) {
+      //  font-size: 30px;
+      //}
+    }
+  }
+
+  .service-box-label {
+    //position: absolute;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 30px;
+    text-align: center;
+    margin: 25px 0 40px 0;
+
+    color: #84A3C7;
+
+    @media (max-width: 768px){
+      font-size: 24px;
+      line-height: 26px;
+      margin: 15px 0 40px 0;
+    }
+  }
+
+  &:hover {
+    .service-box {
+      background: #2079e2;
+      //box-shadow: 0px 2px 30px rgba(37, 131, 240, 0.5);
+      border: none;
+      transform: translateY(-3%);
+      //box-shadow: 0 7px 7px 0.01rem rgba(58, 164, 224, 0.5);
+      //-webkit-box-shadow: 0 7px 7px 0.01rem rgba(58, 164, 224, 0.5);
+      animation: 0.5s ease-in service-box-anim;
+
+      .service-icon {
+        color: #fff;
+      }
+    }
+
+    .service-box-label {
+      font-size: 28px;
+      color: #003168;
+
+      @media (max-width: 768px){
+        font-size: 24px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  &:active {
+    .service-box {
+      background: #196ac9;
+      transform: translateY(0%);
+      box-shadow: none;
+
+      .service-icon {
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+@keyframes service-box-anim {
+  0% {
+    transform: translateY(0%);
+  }
+  25% {
+    transform: translateY(-10%);
+  }
+  50% {
+    transform: translateY(2%);
+  }
+  75% {
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(-3%);
+  }
+}
+
+
+.call-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.2);
+  backdrop-filter: blur(20px);
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .service-box-container {
+    .service-box {
+      width: 150px;
+      height: 150px;
+    }
+
+  }
+}
+
+
+.main-slogan {
+  text-align: right;
+  width: 60%;
+  word-wrap: break-word;
+  font-size: 90px;
+  line-height: 1;
+  font-weight: 600;
+  color: #fff;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    line-height: 1.2;
+    font-size: 40px;
+    font-weight: 700;
+  }
+}
+
+
+
