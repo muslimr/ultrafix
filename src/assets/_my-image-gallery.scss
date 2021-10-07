@@ -1,0 +1,11 @@
+.my-image-gallery-image {
+  min-width: 100%;
+
+  .image-gallery-image {
+    //min-width: 320px !important;
+
+    min-width: 100%;
+    //max-width: calc(100%) !important;
+    //height: auto !important;
+  }
+}

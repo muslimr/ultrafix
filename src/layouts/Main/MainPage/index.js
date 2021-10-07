@@ -4,9 +4,9 @@ import {AuthContext} from "../../../context/AuthContext";
 import {MyServiceIcon} from "../../../components/custom/MyServiceIcon";
 import {Col, Container, Row} from "react-bootstrap";
 import DividerLine from "../../../components/custom/DividerLine";
-import MyInput from "../../../components/custom/MyInput";
-import {Button} from "@material-ui/core";
 import ContactUs from "./components/contact-us";
+import ImageGallery from 'react-image-gallery';
+
 
 
 const MainPage = () => {
@@ -32,7 +32,6 @@ const MainPage = () => {
         }
     );
 
-    // const isMobile = useIsMobile();
     const {loading, request} = useHttp();
     const {token} = useContext(AuthContext);
     const dimensions = useWindowDimensions();
@@ -61,9 +60,20 @@ const MainPage = () => {
     const {breakpoint} = useWindowDimensions();
 
 
+    const images = [
+        {original: '/assets/JPG/ultrafix1.jpg'},
+        {original: '/assets/JPG/ultrafix2.jpg'},
+        {original: '/assets/JPG/ultrafix3.jpg'},
+        {original: '/assets/JPG/ultrafix4.jpg'},
+        {original: '/assets/JPG/ultrafix5.jpg'},
+        {original: '/assets/JPG/ultrafix6.jpg'},
+        {original: '/assets/JPG/ultrafix7.jpg'},
+        {original: '/assets/JPG/ultrafix8.jpg'},
+    ];
+
+
     return(
         <div className='d-flex flex-column align-items-center' style={{minHeight: '100vh'}}>
-
                 <div className='d-flex align-items-end'
                      style={{
                          position: 'relative',
@@ -73,12 +83,9 @@ const MainPage = () => {
                          background: 'linear-gradient(to right, #2583F0, #0551A8)'
                      }}
                 >
-                    {
-                        // dimensions.width > 1200 &&
-                        <img src={`/assets/SVG/Ultrafix-icon-for-bg.svg`}
-                             style={{position: 'absolute', width: breakpoint === "sm" ? 250 : 500}}
-                        />
-                    }
+                    <img src={`/assets/SVG/Ultrafix-icon-for-bg.svg`}
+                         style={{position: 'absolute', width: breakpoint === "sm" ? 250 : 500}}
+                    />
 
                     <div className={`d-flex flex-column align-items-end p-${breakpoint === "sm" ? "4" : "5"}`}
                          style={{zIndex: 5, width: '100%'}}
@@ -116,7 +123,6 @@ const MainPage = () => {
                                 fontWeight: 400,
                                 color: '#fff'
                             }}>
-
                                 Call now and book your service technician
                             </div>
                         </div>
@@ -133,7 +139,7 @@ const MainPage = () => {
                     <div style={{
                         fontSize: breakpoint === "sm" ? 30 : 42,
                         fontWeight: breakpoint === "sm" ? 600 : 500,
-                        color: '#003168'
+                        color: '#003168',
                     }}>
                         Our Services
                     </div>
@@ -149,7 +155,6 @@ const MainPage = () => {
                                         <MyServiceIcon
                                             name={item.toLowerCase()}
                                             className={'service-icon'}
-                                            // style={breakpoint === "sm" && {maxWidth: 50, fontSize: 30}}
                                         />
                                     </div>
                                     <div className='service-box-label'>{item}</div>
@@ -166,8 +171,18 @@ const MainPage = () => {
             <ContactUs />
 
 
-            <img src={`/assets/JPG/technician1.jpg`} style={{width: '100%', marginBottom: 10}}/>
-            <img src={`/assets/PNG/technician2.png`} style={{width: '100%', marginBottom: 10}}/>
+            {/**  IMAGE SLIDER section  **/}
+            <div style={{width: "100%"}}>
+                <ImageGallery items={images}
+                              fullscreen={true}
+                              autoPlay={true}
+                              showFullscreenButton={false}
+                              showPlayButton={false}
+                              showBullets={true}
+                              useBrowserFullscreen={true}
+                              className={"my-image-gallery"}
+                />
+            </div>
 
         </div>
     );
