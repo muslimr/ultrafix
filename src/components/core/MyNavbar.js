@@ -25,7 +25,6 @@ const StyledTab = withStyles((theme) => ({
         color: '#7c91a7',
         fontWeight: theme.typography.fontWeightMedium,
         fontSize: theme.typography.pxToRem(18),
-        marginRight: theme.spacing(1),
         '&:hover': {
             opacity: 1,
             color: '#003168'

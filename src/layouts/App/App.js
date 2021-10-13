@@ -64,8 +64,25 @@ function Main() {
                         {
                             dimensions.width < 768 &&
                             <div className='mob_footer'>
+                                <form method="get"
+                                      action={'https://www.facebook.com/ultrafixappliance'}
+                                      style={{cursor: 'pointer'}}
+                                      className="call-btn"
+                                >
+                                    <button type="submit"
+                                            className='d-flex align-items-center'
+                                            style={{background: 'none', color: '#fff', border: 'none' }}
+                                    >
+                                        <img src={`/assets/SVG/fb-icon.svg`} style={{width: 30}}/>
+                                    </button>
+                                </form>
+
                                 <a href="tel:+18329980886" className="call-btn">
                                     <img src="/assets/phone.svg" alt=''/>
+                                </a>
+
+                                <a href="instagram://user?username=ultrafixappliance" className="call-btn">
+                                    <img src={`/assets/SVG/instagram-icon.svg`} style={{width: 30}}/>
                                 </a>
                             </div>
                         }

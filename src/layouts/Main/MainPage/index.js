@@ -6,6 +6,7 @@ import {Col, Container, Row} from "react-bootstrap";
 import DividerLine from "../../../components/custom/DividerLine";
 import ContactUs from "./components/contact-us";
 import ImageGallery from 'react-image-gallery';
+import Prices from "./components/prices";
 
 
 
@@ -133,7 +134,7 @@ const MainPage = () => {
             {/**  SERVICES section  **/}
             <div id={"services"} style={{marginBottom: 50}}/>
 
-            <div className='d-flex flex-column w-100 pb-5'>
+            <div className='d-flex flex-column w-100'>
                 <div style={breakpoint === "sm" ? {marginLeft: 25, marginTop: 20} : {marginLeft: 100, marginTop: 50}}>
                     <div style={{
                         fontSize: breakpoint === "sm" ? 30 : 42,
@@ -163,6 +164,11 @@ const MainPage = () => {
                     </Row>
                 </Container>
             </div>
+
+
+            {/**  PRICES section  **/}
+            <div id={"prices"} style={{marginBottom: 30}}/>
+            <Prices />
 
             {/**  CONTACT US section  **/}
             <div id={"contact"} />

@@ -51,15 +51,31 @@ function App() {
                             <div>
                                 We are in social networks
                                 <div className='d-flex align-items-start mt-3'>
-                                    <div className='d-flex align-items-center' style={{cursor: 'pointer'}}>
-                                        <img src={`/assets/SVG/fb-icon.svg`} style={{width: 30, marginRight: 5}}/>
-                                        <div className='mx-2'>Facebook</div>
-                                    </div>
+                                    <form method="get"
+                                          action={'https://www.facebook.com/ultrafixappliance'}
+                                          style={{cursor: 'pointer'}}
+                                    >
+                                        <button type="submit"
+                                                className='d-flex align-items-center'
+                                                style={{background: 'none', color: '#fff', border: 'none' }}
+                                        >
+                                            <img src={`/assets/SVG/fb-icon.svg`} style={{width: 30, marginRight: 5}}/>
+                                            <div className='mx-2'>Facebook</div>
+                                        </button>
+                                    </form>
 
-                                    <div className='d-flex mx-4 align-items-center' style={{cursor: 'pointer'}}>
-                                        <img src={`/assets/SVG/instagram-icon.svg`} style={{width: 30, marginRight: 5}}/>
-                                        <div className='mx-2'>Instagram</div>
-                                    </div>
+                                    <form method="get"
+                                          action={'https://www.instagram.com/ultrafixappliance/'}
+                                          style={{cursor: 'pointer'}}
+                                    >
+                                        <button type="submit"
+                                                className='d-flex mx-4 align-items-center'
+                                                style={{background: 'none', color: '#fff', border: 'none' }}
+                                        >
+                                            <img src={`/assets/SVG/instagram-icon.svg`} style={{width: 30, marginRight: 5}}/>
+                                            <div className='mx-2'>Instagram</div>
+                                        </button>
+                                    </form>
                                 </div>
                             </div>
                         }
