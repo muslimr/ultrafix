@@ -27,6 +27,8 @@ function Main() {
     const pageRoutes = [
         {label: 'Services', route: '#services'},
         {label: 'Prices', route: '#prices'},
+        {label: 'Why Us', route: '#whyus'},
+        {label: 'Brands', route: '#brands'},
         {label: 'Contact Us', route: '#contact'},
         {label: 'About Us', route: '#about'},
     ];

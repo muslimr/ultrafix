@@ -74,61 +74,60 @@ const MainPage = () => {
 
     return(
         <div className='d-flex flex-column align-items-center' style={{minHeight: '100vh'}}>
-                <div className='d-flex align-items-end'
-                     style={{
-                         position: 'relative',
-                         width: '100%',
-                         minHeight: breakpoint === "sm" ? 200 : 450,
-                         marginTop: breakpoint === "sm" ? 70 : 90,
-                         background: 'linear-gradient(to right, #2583F0, #0551A8)'
-                     }}
+            <div className='d-flex align-items-end'
+                 style={{
+                     position: 'relative',
+                     width: '100%',
+                     minHeight: breakpoint === "sm" ? 200 : 450,
+                     marginTop: breakpoint === "sm" ? 70 : 90,
+                     background: 'linear-gradient(to right, #2583F0, #0551A8)'
+                 }}
+            >
+                <img src={`/assets/SVG/Ultrafix-icon-for-bg.svg`}
+                     style={{position: 'absolute', width: breakpoint === "sm" ? 250 : 500}}
+                />
+
+                <div className={`d-flex flex-column align-items-end p-${breakpoint === "sm" ? "4" : "5"}`}
+                     style={{zIndex: 5, width: '100%'}}
                 >
-                    <img src={`/assets/SVG/Ultrafix-icon-for-bg.svg`}
-                         style={{position: 'absolute', width: breakpoint === "sm" ? 250 : 500}}
-                    />
+                    <div className={"main-slogan"}>Make Appliances Great Again !</div>
 
-                    <div className={`d-flex flex-column align-items-end p-${breakpoint === "sm" ? "4" : "5"}`}
-                         style={{zIndex: 5, width: '100%'}}
-                    >
-                        <div className={"main-slogan"}>Make Appliances Great Again !</div>
-
-                        <div className={`d-flex flex-column align-items-${breakpoint === "sm" ? "start" : "end"}`} style={{width: "100%"}}>
-                            <div style={{
-                                marginTop: breakpoint === "sm" ? 40 : 70,
-                                textAlign: breakpoint !== "sm" && 'right',
-                                width: breakpoint === "sm" ? "100%" : "60%",
-                                wordWrap: 'break-word',
-                                fontSize: breakpoint === "sm" ? 30 : 60,
-                                lineHeight: 1,
-                                fontWeight: breakpoint === "sm" ? 600 : 500,
-                                color: '#fff'
-                            }}>
-                                <img src={`/assets/SVG/calling-phone.svg`}
-                                     style={
-                                         breakpoint === "sm"
-                                             ? {width: 30, marginRight: 15, marginBottom: 10}
-                                             : {width: 70, marginRight: 30, marginBottom: 10}
-                                     }
-                                />
-                                (832) 998-0886
-                            </div>
-
-                            <div style={{
-                                marginTop: breakpoint === "sm" ? 0 : 20,
-                                textAlign: (breakpoint !== "sm") && "right",
-                                width: breakpoint === "sm" ? "100%" : "60%",
-                                wordWrap: 'break-word',
-                                fontSize: breakpoint === "sm" ? 16 : 22,
-                                lineHeight: 1,
-                                fontWeight: 400,
-                                color: '#fff'
-                            }}>
-                                Call now and book your service technician
-                            </div>
+                    <div className={`d-flex flex-column align-items-${breakpoint === "sm" ? "start" : "end"}`} style={{width: "100%"}}>
+                        <div style={{
+                            marginTop: breakpoint === "sm" ? 40 : 70,
+                            textAlign: breakpoint !== "sm" && 'right',
+                            width: breakpoint === "sm" ? "100%" : "60%",
+                            wordWrap: 'break-word',
+                            fontSize: breakpoint === "sm" ? 30 : 60,
+                            lineHeight: 1,
+                            fontWeight: breakpoint === "sm" ? 600 : 500,
+                            color: '#fff'
+                        }}>
+                            <img src={`/assets/SVG/calling-phone.svg`}
+                                 style={
+                                     breakpoint === "sm"
+                                         ? {width: 30, marginRight: 15, marginBottom: 10}
+                                         : {width: 70, marginRight: 30, marginBottom: 10}
+                                 }
+                            />
+                            (832) 998-0886
                         </div>
 
+                        <div style={{
+                            marginTop: breakpoint === "sm" ? 0 : 20,
+                            textAlign: (breakpoint !== "sm") && "right",
+                            width: breakpoint === "sm" ? "100%" : "60%",
+                            wordWrap: 'break-word',
+                            fontSize: breakpoint === "sm" ? 16 : 22,
+                            lineHeight: 1,
+                            fontWeight: 400,
+                            color: '#fff'
+                        }}>
+                            Call now and book your service technician
+                        </div>
                     </div>
                 </div>
+            </div>
 
 
             {/**  SERVICES section  **/}
@@ -165,11 +164,9 @@ const MainPage = () => {
                 </Container>
             </div>
 
-
             {/**  CONTACT US section  **/}
             <div id={"contact"} />
             <ContactUs />
-
 
             {/**  IMAGE SLIDER section  **/}
             <div style={{width: "100%"}}>
@@ -183,7 +180,6 @@ const MainPage = () => {
                               className={"my-image-gallery"}
                 />
             </div>
-
         </div>
     );
 }

@@ -35,19 +35,39 @@ function App() {
                 <div className='no-select'>
                     <Main/>
                     {routes}
-                    <div className='d-flex flex-column align-items-end justify-content-center'
+                    <div className='d-flex  justify-content-between'
                          style={{
                              position: 'relative',
                              color: '#fff',
                              width: '100%',
-                             minHeight: 100,
+                             minHeight: 80,
                              padding: breakpoint === "sm" ? "25px 25px 100px 25px" : 40,
-                             paddingBottom: breakpoint === "sm" ? 100 : 40,
+                             paddingBottom: breakpoint === "sm" ? 100 : 30,
                              background: '#003168'
                          }}
                     >
-                        <img src={`/assets/SVG/Ultrafix-logo-white.svg`} style={{width: 150, marginBottom: 15}}/>
-                        <div style={{fontSize: 12}}>Copyright © 2021 "UltraFix Appliance Repair" LLC</div>
+                        {
+                            breakpoint !== 'sm' &&
+                            <div>
+                                We are in social networks
+                                <div className='d-flex align-items-start mt-3'>
+                                    <div className='d-flex align-items-center' style={{cursor: 'pointer'}}>
+                                        <img src={`/assets/SVG/fb-icon.svg`} style={{width: 30, marginRight: 5}}/>
+                                        <div className='mx-2'>Facebook</div>
+                                    </div>
+
+                                    <div className='d-flex mx-4 align-items-center' style={{cursor: 'pointer'}}>
+                                        <img src={`/assets/SVG/instagram-icon.svg`} style={{width: 30, marginRight: 5}}/>
+                                        <div className='mx-2'>Instagram</div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                        <div>
+                            <img src={`/assets/SVG/Ultrafix-logo-white.svg`} style={{width: 150, marginBottom: 15}}/>
+                            <div style={{fontSize: 12}}>Copyright © 2021 "UltraFix Appliance Repair" LLC</div>
+                        </div>
                     </div>
                 </div>
             </Router>
