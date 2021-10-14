@@ -64,10 +64,10 @@ const MobView = (props) => {
                 </div>
 
                 <div style={{fontSize: "2.6rem", lineHeight: 1.2, fontWeight: 600, textAlign: "end"}}>
-                    THE FIRST RATED
+                    THE BEST RATED
                 </div>
                 <div style={{fontSize: "1.8rem", lineHeight: 1.1, marginTop: 10, fontWeight: 500, textAlign: "end"}}>
-                    Houston's <b style={{color: "#fff", fontWeight: 500}}>Appliance Repair Service</b>
+                    Appliance Repair Specialists in Houston
                 </div>
                 <div style={{fontSize: "1.8rem", marginTop: 30, textAlign: "end"}}>
                     <img src={`/assets/SVG/calling-phone.svg`}
@@ -76,7 +76,7 @@ const MobView = (props) => {
                     (832) 998-0886
                 </div>
                 <div style={{fontSize: "1rem", lineHeight: 1.1, marginBottom: 30, textAlign: "end",}}>
-                    Call Us to schedule an appointment or schedule directly from our website.
+                    Call Us Now
                 </div>
             </div>
             <div style={{
@@ -100,11 +100,27 @@ const MobView = (props) => {
                         onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, phone: e.target.value}})}
                     />
                 </div>
+                {/*<div style={{marginBottom: 20}}>*/}
+                {/*    <MyInput label={'Email'}*/}
+                {/*        // containerStyle={{minWidth: 400}}*/}
+                {/*        //      value={state.dataToSend.email}*/}
+                {/*        //      onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, email: e.target.value}})}*/}
+                {/*    />*/}
+                {/*</div>*/}
                 <div style={{marginBottom: 20}}>
                     <MyInput label={'Address'}
                              // containerStyle={{minWidth: 400}}
                         value={state.dataToSend.email}
                         onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, email: e.target.value}})}
+                    />
+                </div>
+
+                <div style={{marginBottom: 20}}>
+                    <MyInput label={'Message'}
+                             multiline
+                        // containerStyle={{minWidth: 400}}
+                        //      value={state.dataToSend.email}
+                        //      onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, email: e.target.value}})}
                     />
                 </div>
 
@@ -146,19 +162,19 @@ const WebView = (props) => {
                 </div>
 
                 <div style={{fontSize: "5rem", lineHeight: 1.2, fontWeight: 600, textAlign: "end"}}>
-                    THE FIRST RATED
+                    THE BEST RATED
                 </div>
-                <div style={{fontSize: "2.54rem", fontWeight: 500, textAlign: "end"}}>
-                    Houston's <b style={{color: "#fff", fontWeight: 500}}>Appliance Repair Service</b>
+                <div style={{fontSize: "2.3rem", fontWeight: 500, textAlign: "end"}}>
+                    Appliance Repair Specialists in Houston
                 </div>
-                <div style={{fontSize: 40, marginTop: 70, textAlign: "end"}}>
+                <div style={{fontSize: "1.6rem", textAlign: "end",  marginTop: 70, }}>
+                    Call Us Now
+                </div>
+                <div style={{fontSize: 40, textAlign: "end"}}>
                     <img src={`/assets/SVG/calling-phone.svg`}
                          style={{width: 45, marginRight: 30, marginBottom: 10}}
                     />
                     (832) 998-0886
-                </div>
-                <div style={{fontSize: "1.2rem", textAlign: "end",}}>
-                    Call Us to schedule an appointment or schedule directly from our website.
                 </div>
             </div>
             <div style={{
@@ -166,25 +182,41 @@ const WebView = (props) => {
                 backgroundColor: "#fff",
                 borderRadius: 10,
             }}>
-                <div style={{marginBottom: 30}}>
+                <div style={{marginBottom: 20}}>
                     <MyInput label={'Full name'}
-                             containerStyle={{minWidth: 400}}
-                        value={state.dataToSend.name}
-                        onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, name: e.target.value}})}
+                        // containerStyle={{minWidth: 400}}
+                             value={state.dataToSend.name}
+                             onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, name: e.target.value}})}
                     />
                 </div>
-                <div style={{marginBottom: 30}}>
+                <div style={{marginBottom: 20}}>
                     <MyInput label={'Phone'}
-                             containerStyle={{minWidth: 400}}
-                        value={state.dataToSend.phone}
-                        onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, phone: e.target.value}})}
+                        // containerStyle={{minWidth: 400}}
+                             value={state.dataToSend.phone}
+                             onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, phone: e.target.value}})}
                     />
                 </div>
-                <div style={{marginBottom: 50}}>
+                {/*<div style={{marginBottom: 20}}>*/}
+                {/*    <MyInput label={'Email'}*/}
+                {/*        // containerStyle={{minWidth: 400}}*/}
+                {/*        //      value={state.dataToSend.email}*/}
+                {/*        //      onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, email: e.target.value}})}*/}
+                {/*    />*/}
+                {/*</div>*/}
+                <div style={{marginBottom: 20}}>
                     <MyInput label={'Address'}
-                             containerStyle={{minWidth: 400}}
-                        value={state.dataToSend.email}
-                        onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, email: e.target.value}})}
+                        // containerStyle={{minWidth: 400}}
+                             value={state.dataToSend.email}
+                             onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, email: e.target.value}})}
+                    />
+                </div>
+
+                <div style={{marginBottom: 20}}>
+                    <MyInput label={'Message'}
+                             multiline
+                        // containerStyle={{minWidth: 400}}
+                        //      value={state.dataToSend.email}
+                        //      onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, email: e.target.value}})}
                     />
                 </div>
 

@@ -18,6 +18,7 @@ export default function MyInput(props) {
         multiline,
         containerStyle,
         onChange,
+        style,
     } = props;
     const classes = useStyles();
 
@@ -29,6 +30,7 @@ export default function MyInput(props) {
                        variant="outlined"
                        value={value}
                        onChange={onChange}
+                       style={style}
             />
         </div>
     );

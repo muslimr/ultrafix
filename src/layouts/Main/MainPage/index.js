@@ -7,6 +7,8 @@ import DividerLine from "../../../components/custom/DividerLine";
 import ContactUs from "./components/contact-us";
 import ImageGallery from 'react-image-gallery';
 import Prices from "./components/prices";
+import AboutUs from "./components/about-us";
+import WhyUs from "./components/why-we";
 
 
 
@@ -59,18 +61,6 @@ const MainPage = () => {
     ];
 
     const {breakpoint} = useWindowDimensions();
-
-
-    const images = [
-        {original: '/assets/JPG/ultrafix1.jpg'},
-        {original: '/assets/JPG/ultrafix2.jpg'},
-        {original: '/assets/JPG/ultrafix3.jpg'},
-        {original: '/assets/JPG/ultrafix4.jpg'},
-        {original: '/assets/JPG/ultrafix5.jpg'},
-        {original: '/assets/JPG/ultrafix6.jpg'},
-        {original: '/assets/JPG/ultrafix7.jpg'},
-        {original: '/assets/JPG/ultrafix8.jpg'},
-    ];
 
 
     return(
@@ -170,22 +160,17 @@ const MainPage = () => {
             <div id={"prices"} style={{marginBottom: 30}}/>
             <Prices />
 
+            {/**  WHY US section  **/}
+            <div id={"whyus"}/>
+            <WhyUs />
+
             {/**  CONTACT US section  **/}
             <div id={"contact"} />
             <ContactUs />
 
-            {/**  IMAGE SLIDER section  **/}
-            <div style={{width: "100%"}}>
-                <ImageGallery items={images}
-                              fullscreen={true}
-                              autoPlay={true}
-                              showFullscreenButton={false}
-                              showPlayButton={false}
-                              showBullets={true}
-                              useBrowserFullscreen={true}
-                              className={"my-image-gallery"}
-                />
-            </div>
+            {/**  ABOUT US section  **/}
+            <div id={"about"}/>
+            <AboutUs />
         </div>
     );
 }
