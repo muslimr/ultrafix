@@ -1,21 +1,25 @@
-import axios from "axios";
 import {Alerts} from "../plugins/Alerts";
+import {Api} from "../plugins/Api";
 
 
 export async function sendDataToClient (state, setState) {
-    let result = false;
     setState({loading: true});
 
-    await axios.post('/api/nodemail/send',{params: state.dataToSend})
-        .catch(error => setState({error: error, loading: false}))
-        .then(response => result = response);
+    let result = await Api.post('contactStore', state.dataToSend);
 
     if (result) {
-        await Alerts.successModal(result.data?.description)
-        setState({
-            success: result.data?.description,
-            // count: result.data?.count,
-            loading: false,
-        });
+        if (result.status === 'sucess'){
+            await Alerts.successModal(result.description)
+            setState({
+                success: result.description,
+                loading: false,
+            });
+        }else{
+            await Alerts.errorModal(result.description)
+            setState({
+                error: result.description,
+                loading: false,
+            });
+        }
     }
 }
