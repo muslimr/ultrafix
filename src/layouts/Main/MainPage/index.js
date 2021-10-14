@@ -9,6 +9,7 @@ import ImageGallery from 'react-image-gallery';
 import Prices from "./components/prices";
 import AboutUs from "./components/about-us";
 import WhyUs from "./components/why-we";
+import Employees from "./components/employees";
 
 
 
@@ -157,20 +158,24 @@ const MainPage = () => {
 
 
             {/**  PRICES section  **/}
-            <div id={"prices"} style={{marginBottom: 30}}/>
-            <Prices />
+            {/*<div id={"prices"} style={{marginBottom: 30}}/>*/}
+            {/*<Prices />*/}
 
-            {/**  WHY US section  **/}
-            <div id={"whyus"}/>
-            <WhyUs />
+            {/**  ABOUT US section  **/}
+            <div id={"about"}/>
+            <AboutUs />
+
+            {/**  EMPLOYEES section  **/}
+            <Employees />
 
             {/**  CONTACT US section  **/}
             <div id={"contact"} />
             <ContactUs />
 
-            {/**  ABOUT US section  **/}
-            <div id={"about"}/>
-            <AboutUs />
+
+            {/**  WHY US section  **/}
+            <div id={"whyus"}/>
+            <WhyUs />
         </div>
     );
 }
