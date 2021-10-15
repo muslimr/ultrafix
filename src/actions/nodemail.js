@@ -8,7 +8,7 @@ export async function sendDataToClient (state, setState) {
     let result = await Api.post('contactStore', state.dataToSend);
 
     if (result) {
-        if (result.status === 'sucess'){
+        if (result.status === 'success'){
             await Alerts.successModal(result.description)
             setState({
                 success: result.description,

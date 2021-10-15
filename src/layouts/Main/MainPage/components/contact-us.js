@@ -18,7 +18,7 @@ export default function ContactUs (props) {
             dataToSend: {
                 name: "",
                 phone: "",
-                email: "",
+                address: "",
             },
             listData: [],
             count: 0,
@@ -110,8 +110,8 @@ const MobView = (props) => {
                 <div style={{marginBottom: 20}}>
                     <MyInput label={'Address'}
                              // containerStyle={{minWidth: 400}}
-                        value={state.dataToSend.email}
-                        onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, email: e.target.value}})}
+                        value={state.dataToSend.address}
+                        onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, address: e.target.value}})}
                     />
                 </div>
 
@@ -206,8 +206,8 @@ const WebView = (props) => {
                 <div style={{marginBottom: 20}}>
                     <MyInput label={'Address'}
                         // containerStyle={{minWidth: 400}}
-                             value={state.dataToSend.email}
-                             onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, email: e.target.value}})}
+                             value={state.dataToSend.address}
+                             onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, address: e.target.value}})}
                     />
                 </div>
 
