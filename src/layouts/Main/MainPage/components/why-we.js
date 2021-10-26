@@ -13,6 +13,9 @@ const images = [
     {original: '/assets/JPG/ultrafix6.jpg'},
     {original: '/assets/JPG/ultrafix7.jpg'},
     {original: '/assets/JPG/ultrafix8.jpg'},
+    {original: '/assets/JPG/ultrafix9.jpg'},
+    {original: '/assets/JPG/ultrafix10.jpg'},
+    {original: '/assets/JPG/ultrafix11.jpg'},
 ];
 
 
@@ -35,11 +38,7 @@ const MobView = (props) => {
     return(
         <div style={{backgroundColor: '#fff'}}>
             <div style={{marginLeft: 25, marginTop: 20}}>
-                <div style={{
-                    fontSize: 30,
-                    fontWeight: 600,
-                    color: '#003168',
-                }}>
+                <div style={{fontSize: 30, fontWeight: 600, color: '#003168',}}>
                     Why Us ?
                 </div>
                 <DividerLine color={'#D2D2D2'}/>
@@ -56,7 +55,7 @@ const MobView = (props) => {
                               autoPlay={true}
                               showFullscreenButton={false}
                               showPlayButton={false}
-                              showBullets={true}
+                              // showBullets={true}
                               useBrowserFullscreen={true}
                               className={"my-image-gallery"}
                 />
@@ -70,11 +69,7 @@ const WebView = (props) => {
     return(
         <div style={{backgroundColor: '#fff'}}>
             <div style={{marginLeft: 100, marginTop: 50}}>
-                <div style={{
-                    fontSize: 42,
-                    fontWeight: 500,
-                    color: '#003168',
-                }}>
+                <div style={{fontSize: 42, fontWeight: 500, color: '#003168',}}>
                     Why Us ?
                 </div>
                 <DividerLine color={'#D2D2D2'}/>
@@ -91,8 +86,8 @@ const WebView = (props) => {
                               autoPlay={true}
                               showFullscreenButton={false}
                               showPlayButton={false}
-                              showBullets={true}
-                    // useBrowserFullscreen={true}
+                              // showBullets={true}
+                              useBrowserFullscreen={true}
                               className={"my-image-gallery"}
                 />
             </div>
