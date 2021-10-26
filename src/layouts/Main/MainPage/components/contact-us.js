@@ -19,6 +19,7 @@ export default function ContactUs (props) {
                 name: "",
                 phone: "",
                 address: "",
+                message: "",
             },
             listData: [],
             count: 0,
@@ -90,8 +91,8 @@ const MobView = (props) => {
                     />
                 </div>
                 <div style={{marginBottom: 20}}>
-                    <MyInput label={'Phone'}
-                             // containerStyle={{minWidth: 400}}
+                    <MyInput label={'Phone (xxx) xxx-xxxx'}
+                        // containerStyle={{minWidth: 400}}
                         value={state.dataToSend.phone}
                         onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, phone: e.target.value}})}
                     />
@@ -115,8 +116,8 @@ const MobView = (props) => {
                     <MyInput label={'Message'}
                              multiline
                         // containerStyle={{minWidth: 400}}
-                        //      value={state.dataToSend.email}
-                        //      onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, email: e.target.value}})}
+                             value={state.dataToSend.message}
+                             onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, message: e.target.value}})}
                     />
                 </div>
 
@@ -196,7 +197,7 @@ const WebView = (props) => {
                         />
                     </div>
                     <div style={{marginBottom: 20}}>
-                        <MyInput label={'Phone'}
+                        <MyInput label={'Phone (xxx) xxx-xxxx'}
                             // containerStyle={{minWidth: 400}}
                                  value={state.dataToSend.phone}
                                  onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, phone: e.target.value}})}
@@ -221,8 +222,8 @@ const WebView = (props) => {
                         <MyInput label={'Message'}
                                  multiline
                             // containerStyle={{minWidth: 400}}
-                            //      value={state.dataToSend.email}
-                            //      onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, email: e.target.value}})}
+                                 value={state.dataToSend.message}
+                                 onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, message: e.target.value}})}
                         />
                     </div>
 
