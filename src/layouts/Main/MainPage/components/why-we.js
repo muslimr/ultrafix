@@ -19,6 +19,22 @@ const images = [
 ];
 
 
+const images_mob = [
+    {original: '/assets/JPG/ultrafix1_mob.jpg'},
+    {original: '/assets/JPG/ultrafix2_mob.jpg'},
+    {original: '/assets/JPG/ultrafix3_mob.jpg'},
+    {original: '/assets/JPG/ultrafix4_mob.jpg'},
+    {original: '/assets/JPG/ultrafix5_mob.jpg'},
+    {original: '/assets/JPG/ultrafix6_mob.jpg'},
+    {original: '/assets/JPG/ultrafix7_mob.jpg'},
+    {original: '/assets/JPG/ultrafix8_mob.jpg'},
+    {original: '/assets/JPG/ultrafix9_mob.jpg'},
+    {original: '/assets/JPG/ultrafix10_mob.jpg'},
+    {original: '/assets/JPG/ultrafix11_mob.jpg'},
+];
+
+
+
 export default function WhyUs(props) {
     const {breakpoint} = useWindowDimensions();
 
@@ -50,7 +66,7 @@ const MobView = (props) => {
                 When you choose us for your appliance repair, you learn how closely we hold to these values.
             </div>
             <div style={{width: "100%"}}>
-                <ImageGallery items={images}
+                <ImageGallery items={images_mob}
                               fullscreen={true}
                               autoPlay={true}
                               showFullscreenButton={false}

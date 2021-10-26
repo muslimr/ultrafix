@@ -29,24 +29,29 @@ export default function Employees(props) {
 
 
 const MobView = (props) => {
+    const Employee = ({image, name}) => (
+        <div className='d-flex flex-column align-items-center'>
+            <img src={image} style={{width: 93, height: 93}}/>
+            <div style={{fontSize: 20, marginTop: 10, color: '#84A3C7'}}>{name}</div>
+        </div>
+    )
+
+
     return(
-        <div style={{backgroundColor: '#fff'}}>
-            <div style={{marginLeft: 25, marginTop: 20}}>
-                <div style={{
-                    fontSize: 30,
-                    fontWeight: 600,
-                    color: '#003168',
-                }}>
-                    Best Employees of the {DateLib.date('M')}
+        <div className='w-100' style={{backgroundColor: '#fff'}}>
+            <div style={{marginLeft: 25, marginTop: 40}}>
+                <div style={{fontSize: 30, fontWeight: 600, lineHeight: 1.1, marginBottom: 10, color: '#003168',}}>
+                    The Best Employees of {DateLib.date('F')}
                 </div>
                 <DividerLine color={'#D2D2D2'}/>
             </div>
 
-            <div style={{padding: 40, fontSize: 16, textAlign: 'center', color: '#949494'}}>
-                Our pledge is to establish lasting relationships with our customers by exceeding their expectations and
-                gaining their trust through exceptional performance by each member of our service team. We have been
-                providing top service! See just how our UltraFix Appliance Repair Service
-                in Houston can better your life today!
+            <div className='d-flex justify-content-evenly' style={{padding: '40px 10px'}}>
+                {
+                    employees.map((employee, index) =>
+                        <Employee key={index} image={employee.image} name={employee.name}/>
+                    )
+                }
             </div>
         </div>
     );

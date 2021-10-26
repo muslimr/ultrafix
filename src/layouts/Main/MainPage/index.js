@@ -10,6 +10,7 @@ import Prices from "./components/prices";
 import AboutUs from "./components/about-us";
 import WhyUs from "./components/why-we";
 import Employees from "./components/employees";
+import Brands from "./components/brands";
 
 
 
@@ -126,7 +127,7 @@ const MainPage = () => {
             <div id={"services"} style={{marginBottom: 50}}/>
 
             <div className='d-flex flex-column w-100'>
-                <div style={breakpoint === "sm" ? {marginLeft: 25, marginTop: 20} : {marginLeft: 100, marginTop: 50}}>
+                <div style={breakpoint === "sm" ? {marginLeft: 25,} : {marginLeft: 100, marginTop: 50}}>
                     <div style={{
                         fontSize: breakpoint === "sm" ? 30 : 42,
                         fontWeight: breakpoint === "sm" ? 600 : 500,
@@ -169,7 +170,7 @@ const MainPage = () => {
             <Employees />
 
             {/**  BRANDS section  **/}
-            {/*<Employees />*/}
+            <Brands />
 
             {/**  CONTACT US section  **/}
             <div id={"contact"} />

@@ -52,13 +52,11 @@ const MobView = (props) => {
                  position: 'relative',
                  width: '100%',
                  minHeight: 200,
-                 marginTop: 50,
-                 background: 'linear-gradient(to right, #2583F0, #0551A8)',
-                 padding: 25,
+                 background: '#fff',
+                 padding: 30,
              }}
         >
-            <div style={{color: "#fff"}}>
-
+            <div style={{color: "#003168"}}>
                 <div className="d-flex justify-content-end mb-4">
                     <img src={`/assets/SVG/5stars.svg`} style={{width: 200, marginTop: 10}} />
                 </div>
@@ -66,22 +64,20 @@ const MobView = (props) => {
                 <div style={{fontSize: "2.6rem", lineHeight: 1.2, fontWeight: 600, textAlign: "end"}}>
                     THE BEST RATED
                 </div>
-                <div style={{fontSize: "1.8rem", lineHeight: 1.1, marginTop: 10, fontWeight: 500, textAlign: "end"}}>
+                <div style={{fontSize: "1.8rem", lineHeight: 1.1, marginTop: 10, fontWeight: 500, textAlign: "end", color: '#8B9CB6'}}>
                     Appliance Repair Specialists in Houston
                 </div>
-                <div style={{fontSize: "1.8rem", marginTop: 30, textAlign: "end"}}>
-                    <img src={`/assets/SVG/calling-phone.svg`}
-                         style={{width: 35, marginRight: 15, marginBottom: 10}}
-                    />
-                    (832) 998-0886
-                </div>
-                <div style={{fontSize: "1rem", lineHeight: 1.1, marginBottom: 30, textAlign: "end",}}>
+                <div style={{fontSize: "1.5rem", lineHeight: 1.1, marginTop: 40, fontWeight: 500, textAlign: "end", color: '#8B9CB6'}}>
                     Call Us Now
+                </div>
+                <div style={{fontSize: "2rem", textAlign: "end", marginBottom: 30,}}>
+                    <img src={`/assets/SVG/calling-phone.svg`} style={{width: 35, marginRight: 15, marginBottom: 10}}/>
+                    (832) 998-0886
                 </div>
             </div>
             <div style={{
                 width: "100%",
-                padding: 25,
+                // padding: 25,
                 backgroundColor: "#fff",
                 borderRadius: 10,
                 marginBottom: 10,
