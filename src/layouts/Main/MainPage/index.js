@@ -168,13 +168,16 @@ const MainPage = () => {
             {/**  EMPLOYEES section  **/}
             <Employees />
 
+            {/**  BRANDS section  **/}
+            {/*<Employees />*/}
+
             {/**  CONTACT US section  **/}
             <div id={"contact"} />
             <ContactUs />
 
 
             {/**  WHY US section  **/}
-            <div id={"whyus"}/>
+            <div id={"whyus"} />
             <WhyUs />
         </div>
     );
