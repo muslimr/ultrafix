@@ -5,10 +5,10 @@ import DividerLine from "../../../../components/custom/DividerLine";
 
 
 const images = [
-    {original: '/assets/JPG/appliances1.jpeg'},
-    {original: '/assets/JPG/appliances2.jpeg'},
-    {original: '/assets/JPG/appliances3.jpeg'},
-    {original: '/assets/JPG/appliances4.jpeg'},
+    {original: '/assets/JPG/appliances1.jpg'},
+    {original: '/assets/JPG/appliances2.jpg'},
+    {original: '/assets/JPG/appliances3.jpg'},
+    {original: '/assets/JPG/appliances4.jpg'},
 ];
 
 

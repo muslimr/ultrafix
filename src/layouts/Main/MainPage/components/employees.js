@@ -7,9 +7,9 @@ import {Image} from "@material-ui/icons";
 
 
 const employees = [
-    {image: '/assets/PNG/employee1.png', name: 'Aydin'},
-    {image: '/assets/PNG/employee2.png', name: 'Orkhan'},
-    {image: '/assets/PNG/employee3.png', name: 'Mack'},
+    {image: '/assets/PNG/employee1.jpg', name: 'Aydin'},
+    {image: '/assets/PNG/employee2.jpg', name: 'Orkhan'},
+    {image: '/assets/PNG/employee3.jpg', name: 'Mack'},
 ];
 
 
