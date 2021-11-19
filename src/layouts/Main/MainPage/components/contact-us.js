@@ -123,6 +123,7 @@ const MobView = (props) => {
 
                 <Button variant="contained"
                         color="primary"
+                        disabled={state.loading}
                         style={{width: "100%", minHeight: 50}}
                         onClick={() => sendDataToClient(state, setState)}
                 >
@@ -229,6 +230,7 @@ const WebView = (props) => {
 
                     <Button variant="contained"
                             color="primary"
+                            disabled={state.loading}
                             style={{minWidth: 400, minHeight: 50}}
                             onClick={() => sendDataToClient(state, setState)}
                     >
