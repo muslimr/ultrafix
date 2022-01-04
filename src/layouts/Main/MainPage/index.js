@@ -11,6 +11,7 @@ import AboutUs from "./components/about-us";
 import WhyUs from "./components/why-we";
 import Employees from "./components/employees";
 import Brands from "./components/brands";
+import Reviews from "./components/reviews";
 
 
 
@@ -163,7 +164,7 @@ const MainPage = () => {
             {/*<Prices />*/}
 
             {/**  ABOUT US section  **/}
-            <div id={"about"}/>
+            <div id={"about"} style={{marginBottom: 25}}/>
             <AboutUs />
 
             {/**  EMPLOYEES section  **/}
@@ -172,13 +173,16 @@ const MainPage = () => {
             {/**  BRANDS section  **/}
             <Brands />
 
+            {/**  REVIEWS section  **/}
+            <div id={"reviews"} style={{marginBottom: 25}}/>
+            <Reviews />
+
             {/**  CONTACT US section  **/}
             <div id={"contact"} />
             <ContactUs />
 
-
             {/**  WHY US section  **/}
-            <div id={"whyus"} />
+            <div id={"whyus"} style={{marginBottom: 25}}/>
             <WhyUs />
         </div>
     );

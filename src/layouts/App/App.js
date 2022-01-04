@@ -27,11 +27,11 @@ function Main() {
     const pageRoutes = [
         {label: 'Services', route: '#services'},
         {label: 'About Us', route: '#about'},
+        {label: 'Reviews', route: '#reviews'},
         // {label: 'Employees', route: '#reviews'},
         // {label: 'Brands', route: '#brands'},
         {label: 'Contact Us', route: '#contact'},
         {label: 'Why Us', route: '#whyus'},
-        // {label: 'Reviews', route: '#reviews'},
     ];
 
 

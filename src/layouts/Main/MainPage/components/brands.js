@@ -9,6 +9,7 @@ const images = [
     {original: '/assets/JPG/brands2.jpg'},
     {original: '/assets/JPG/brands3.jpg'},
     {original: '/assets/JPG/brands4.jpg'},
+    {original: '/assets/JPG/brands5.jpg'},
 ];
 
 
@@ -16,6 +17,7 @@ const images_mob = [
     {original: '/assets/JPG/brands1_mob.jpg'},
     {original: '/assets/JPG/brands2_mob.jpg'},
     {original: '/assets/JPG/brands3_mob.jpg'},
+    {original: '/assets/JPG/brands4_mob.jpg'},
 ];
 
 
