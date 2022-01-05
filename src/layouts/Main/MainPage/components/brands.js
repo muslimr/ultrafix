@@ -40,7 +40,7 @@ export default function Brands(props) {
 const MobView = (props) => {
     return(
         <div style={{backgroundColor: '#fff'}}>
-            <div style={{marginLeft: 25, marginTop: 20, marginBottom: 30}}>
+            <div style={{marginLeft: 25, marginTop: 20, marginBottom: 20}}>
                 <div style={{
                     fontSize: 30,
                     fontWeight: 600,
@@ -51,7 +51,7 @@ const MobView = (props) => {
                 <DividerLine color={'#D2D2D2'}/>
             </div>
 
-            <div style={{width: "100%", marginTop: 20, marginBottom: 30}}>
+            <div style={{width: "100%", marginBottom: 30}}>
                 <ImageGallery items={images_mob}
                               fullscreen={true}
                               autoPlay={true}

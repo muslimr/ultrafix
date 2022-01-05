@@ -125,10 +125,10 @@ const MainPage = () => {
 
 
             {/**  SERVICES section  **/}
-            <div id={"services"} style={{marginBottom: 50}}/>
+            <div id={"services"} style={{marginBottom: breakpoint !== "sm" && 50}}/>
 
-            <div className='d-flex flex-column w-100'>
-                <div style={breakpoint === "sm" ? {marginLeft: 25,} : {marginLeft: 100, marginTop: 50}}>
+            <div className='d-flex flex-column w-100' style={{backgroundColor: '#EFF2F4'}}>
+                <div style={breakpoint === "sm" ? {marginLeft: 25, marginTop: 40} : {marginLeft: 100, marginTop: 50}}>
                     <div style={{
                         fontSize: breakpoint === "sm" ? 30 : 42,
                         fontWeight: breakpoint === "sm" ? 600 : 500,
@@ -171,10 +171,11 @@ const MainPage = () => {
             <Employees />
 
             {/**  BRANDS section  **/}
+            <div id={"brands"} style={{marginBottom: breakpoint !== "sm" && 50}}/>
             <Brands />
 
             {/**  REVIEWS section  **/}
-            <div id={"reviews"} style={{marginBottom: 25}}/>
+            <div id={"reviews"} style={{marginBottom: breakpoint !== "sm" && 50}}/>
             <Reviews />
 
             {/**  CONTACT US section  **/}
@@ -182,7 +183,7 @@ const MainPage = () => {
             <ContactUs />
 
             {/**  WHY US section  **/}
-            <div id={"whyus"} style={{marginBottom: 25}}/>
+            <div id={"whyus"} style={{marginBottom: breakpoint !== "sm" && 50}}/>
             <WhyUs />
         </div>
     );

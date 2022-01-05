@@ -67,8 +67,7 @@ const WebView = () => {
             </div>
 
             <div style={{width: '100%', padding: 80, backgroundColor: '#fff'}}>
-                <img src={'/assets/PNG/reviews.png'} style={{height: '100%', width: '100%', marginBottom: 30,}}/>
-                <DividerLine color={'#D2D2D2'} />
+                <img src={'/assets/PNG/reviews.png'} style={{height: '100%', width: '100%'}}/>
             </div>
 
             <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>

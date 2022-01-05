@@ -19,15 +19,6 @@ function App() {
         return <Loader />
     }
 
-    const pageRoutes = [
-        {label: 'Главная', route: '/main'},
-        {label: 'Каталог', route: '/catalog'},
-        {label: 'Прайс-Лист', route: '/price_list'},
-        {label: 'Доставка', route: '/delivery'},
-        {label: 'Контакты', route: '/contacts'},
-        {label: 'О нас', route: '/about'},
-    ];
-
 
     return(
         <AuthContext.Provider value={{token, login, logout, userId, isAuthenticated}}>

@@ -17,7 +17,6 @@ function Main() {
     const isAuthenticated = !!token;
     const [sidebar, setSidebar] = useState(false);
 
-    // const routes = useRoutes(isAuthenticated)
 
     useEffect(() => {
         setSidebar(isAuthenticated)
@@ -27,9 +26,8 @@ function Main() {
     const pageRoutes = [
         {label: 'Services', route: '#services'},
         {label: 'About Us', route: '#about'},
+        {label: 'Brands', route: '#brands'},
         {label: 'Reviews', route: '#reviews'},
-        // {label: 'Employees', route: '#reviews'},
-        // {label: 'Brands', route: '#brands'},
         {label: 'Contact Us', route: '#contact'},
         {label: 'Why Us', route: '#whyus'},
     ];

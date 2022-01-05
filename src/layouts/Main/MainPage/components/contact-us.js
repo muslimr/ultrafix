@@ -159,16 +159,12 @@ const WebView = (props) => {
                      background: '#fff',
                      padding: 100,
                      borderRadius: 20,
-                     // border: '1px solid #EFF2F4',
-                     // boxShadow: '0px 6px 10px rgba(0, 0, 0, 0.07)',
                  }}
             >
                 <div style={{color: "#003168"}}>
-
                     <div className="d-flex justify-content-end mb-4">
                         <img src={`/assets/SVG/5stars.svg`} style={{width: 300,}}/>
                     </div>
-
                     <div style={{fontSize: "5rem", lineHeight: 1.2, fontWeight: 600, textAlign: "end"}}>
                         THE BEST RATED
                     </div>
@@ -187,33 +183,21 @@ const WebView = (props) => {
                     padding: 50,
                     backgroundColor: "#fff",
                     borderRadius: 10,
-                    // border: '1px solid #EFF2F4',
-                    // boxShadow: '0px 6px 10px rgba(0, 0, 0, 0.07)',
                 }}>
                     <div style={{marginBottom: 20}}>
                         <MyInput label={'Full name'}
-                            // containerStyle={{minWidth: 400}}
                                  value={state.dataToSend.name}
                                  onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, name: e.target.value}})}
                         />
                     </div>
                     <div style={{marginBottom: 20}}>
                         <MyInput label={'Phone (xxx) xxx-xxxx'}
-                            // containerStyle={{minWidth: 400}}
                                  value={state.dataToSend.phone}
                                  onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, phone: e.target.value}})}
                         />
                     </div>
-                    {/*<div style={{marginBottom: 20}}>*/}
-                    {/*    <MyInput label={'Email'}*/}
-                    {/*        // containerStyle={{minWidth: 400}}*/}
-                    {/*        //      value={state.dataToSend.email}*/}
-                    {/*        //      onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, email: e.target.value}})}*/}
-                    {/*    />*/}
-                    {/*</div>*/}
                     <div style={{marginBottom: 20}}>
                         <MyInput label={'Address'}
-                            // containerStyle={{minWidth: 400}}
                                  value={state.dataToSend.address}
                                  onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, address: e.target.value}})}
                         />
@@ -222,7 +206,6 @@ const WebView = (props) => {
                     <div style={{marginBottom: 40}}>
                         <MyInput label={'Message'}
                                  multiline
-                            // containerStyle={{minWidth: 400}}
                                  value={state.dataToSend.message}
                                  onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, message: e.target.value}})}
                         />
