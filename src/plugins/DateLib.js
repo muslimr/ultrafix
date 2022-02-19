@@ -92,7 +92,6 @@ export default class DateLib {
                 break;
             case 'month':
                 DateLib.value = new Date(date.getFullYear(), date.getMonth(), 1);
-                // DateLib.value = new Date(date.getFullYear(), date.getMonth(), 1,date.getHours(),date.getMinutes(),date.getSeconds());
                 break;
             case 'year':
                 DateLib.value = new Date(date.getFullYear(), 0, 1);
@@ -119,7 +118,6 @@ export default class DateLib {
                 break;
             case 'month':
                 DateLib.value = new Date(date.getFullYear(), date.getMonth() + 1, 0 ,23, 59, 59, 999);
-                // DateLib.value = new Date(date.getFullYear(), date.getMonth(), 1,date.getHours(),date.getMinutes(),date.getSeconds());
                 break;
             case 'year':
                 DateLib.value = new Date(date.getFullYear(), 11, 31);
@@ -338,7 +336,8 @@ export default class DateLib {
             ["Y", Y],
             ["m", m],
             ["M", months[parseInt(m) - 1]],
-            ["F", monthsFull[parseInt(m) - 1]],
+            ["THIS_MONTH", monthsFull[parseInt(m) - 1]],
+            ["PREV_MONTH", monthsFull[parseInt(m) - 2]],
             ["w", date.getDay()],
             ["W", 0],
             ["d", d],
