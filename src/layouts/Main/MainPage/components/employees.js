@@ -17,10 +17,10 @@ function getRandomItems() {
 }
 
 function getMonth() {
-    if (DateLib.date('d') < 20) {
-        return DateLib.date('PREV_MONTH');
+    if (DateLib.date('d') < 25) {
+        return DateLib.date('Pr');
     }
-    return DateLib.date('THIS_MONTH');
+    return DateLib.date('Th');
 }
 
 
@@ -44,7 +44,7 @@ const MobView = () => {
         <div className='w-100' style={{backgroundColor: '#fff'}}>
             <div style={{marginLeft: 25, marginTop: 40}}>
                 <div style={{fontSize: 30, fontWeight: 600, lineHeight: 1.1, marginBottom: 10, color: '#003168',}}>
-                    The Best Employees of {DateLib.date('F')}
+                    The Best Employees of {getMonth()}
                 </div>
                 <DividerLine color={'#D2D2D2'}/>
             </div>

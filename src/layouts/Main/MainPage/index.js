@@ -1,17 +1,19 @@
-import React, {useCallback, useContext, useEffect, useReducer} from 'react';
+import React, {useCallback, useContext, useReducer, useState} from 'react';
 import {useHttp, useWindowDimensions} from "../../../hooks";
 import {AuthContext} from "../../../context/AuthContext";
 import {MyServiceIcon} from "../../../components/custom/MyServiceIcon";
 import {Col, Container, Row} from "react-bootstrap";
 import DividerLine from "../../../components/custom/DividerLine";
 import ContactUs from "./components/contact-us";
-import ImageGallery from 'react-image-gallery';
-import Prices from "./components/prices";
+import Employees from "./components/employees";
 import AboutUs from "./components/about-us";
 import WhyUs from "./components/why-we";
-import Employees from "./components/employees";
 import Brands from "./components/brands";
 import Reviews from "./components/reviews";
+import {Tooltip} from "antd";
+
+import './styles/index.scss';
+import {Link} from "react-router-dom";
 
 
 
@@ -34,13 +36,13 @@ const MainPage = () => {
             data: [],
             goToSlide: 0,
             offsetRadius: 1,
-            // config: config.gentle
         }
     );
 
     const {loading, request} = useHttp();
     const {token} = useContext(AuthContext);
     const dimensions = useWindowDimensions();
+    const [emailTooltipText, setEmailTooltipText] = useState('Click to copy');
 
     const getCategories = useCallback( async () => {
         try {
@@ -51,16 +53,16 @@ const MainPage = () => {
 
 
     const serviceBoxes = [
-        'Refrigerator',
-        'Ice Machine',
-        'Washer',
-        'Dryer',
-        'Dishwasher',
-        'Oven',
-        'Cooktop',
-        'Microwave',
-        'Wine Cooler',
-        'Freezer',
+        {title: 'Refrigerator', value: 'refrigerator'},
+        {title: 'Ice Machine', value: 'ice_machine'},
+        {title: 'Washer', value: 'washer'},
+        {title: 'Dryer', value: 'dyer'},
+        {title: 'Dishwasher', value: 'dishwasher'},
+        {title: 'Oven', value: 'oven'},
+        {title: 'Cooktop', value: 'cooktop'},
+        {title: 'Microwave', value: 'microwave'},
+        {title: 'Wine Cooler', value: 'wine_cooler'},
+        {title: 'Freezer', value: 'freezer'},
     ];
 
     const {breakpoint} = useWindowDimensions();
@@ -80,6 +82,16 @@ const MainPage = () => {
                 <img src={`/assets/SVG/Ultrafix-icon-for-bg.svg`}
                      style={{position: 'absolute', width: breakpoint === "sm" ? 250 : 500}}
                 />
+
+                <div style={{position: 'absolute', marginBottom: 40, marginLeft: 70, borderRadius: 10,}}>
+                    <div style={{fontSize: 20, fontWeight: 300, color: '#fff', marginBottom: 10}}>
+                        We have been providing
+                        <b style={{fontSize: 22, marginLeft: 7, marginRight: 5, fontWeight: 600,}}>TOP SERVICES</b>
+                    </div>
+                    <img src={`/assets/PNG/recomended.png`}
+                         style={{width: breakpoint === "sm" ? 150 : 600}}
+                    />
+                </div>
 
                 <div className={`d-flex flex-column align-items-end p-${breakpoint === "sm" ? "4" : "5"}`}
                      style={{zIndex: 5, width: '100%'}}
@@ -114,7 +126,7 @@ const MainPage = () => {
                             wordWrap: 'break-word',
                             fontSize: breakpoint === "sm" ? 16 : 22,
                             lineHeight: 1,
-                            fontWeight: 400,
+                            fontWeight: 300,
                             color: '#fff'
                         }}>
                             Call now and book your service technician
@@ -123,9 +135,8 @@ const MainPage = () => {
                 </div>
             </div>
 
-
             {/**  SERVICES section  **/}
-            <div id={"services"} style={{marginBottom: breakpoint !== "sm" && 50}}/>
+            <div id={"services"}/>
 
             <div className='d-flex flex-column w-100' style={{backgroundColor: '#EFF2F4'}}>
                 <div style={breakpoint === "sm" ? {marginLeft: 25, marginTop: 40} : {marginLeft: 100, marginTop: 50}}>
@@ -143,21 +154,20 @@ const MainPage = () => {
                     <Row xs="2" sm="2" md="3" lg="4" xl="5">
                         {
                             serviceBoxes.map((item, index) =>
-                                <Col className='service-box-container'>
+                                <Link className='service-box-container' to={item.value}>
                                     <div className='service-box'>
                                         <MyServiceIcon
-                                            name={item.toLowerCase()}
+                                            name={item?.title?.toLowerCase()}
                                             className={'service-icon'}
                                         />
                                     </div>
-                                    <div className='service-box-label'>{item}</div>
-                                </Col>
+                                    <div className='service-box-label'>{item?.title}</div>
+                                </Link>
                             )
                         }
                     </Row>
                 </Container>
             </div>
-
 
             {/**  PRICES section  **/}
             {/*<div id={"prices"} style={{marginBottom: 30}}/>*/}
@@ -185,6 +195,23 @@ const MainPage = () => {
             {/**  WHY US section  **/}
             <div id={"whyus"} style={{marginBottom: breakpoint !== "sm" && 50}}/>
             <WhyUs />
+
+            {/**  Fixed EMAIL box  **/}
+            <Tooltip title={emailTooltipText}>
+                <div
+                    className="email_box"
+                    onClick={() => {
+                        navigator.clipboard.writeText("info@ultrafixappliance.com");
+                        setEmailTooltipText('Copied');
+                    }}
+                    onMouseOver={() => setEmailTooltipText('Click to copy')}
+                >
+                    <img src={`/assets/SVG/email-icon.svg`}
+                         style={{width: 20, marginRight: 10}}
+                    />
+                    <div style={{fontSize: 18, color: '#fff',}}>info@ultrafixappliance.com</div>
+                </div>
+            </Tooltip>
         </div>
     );
 }

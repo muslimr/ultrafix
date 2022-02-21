@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Loader} from "./components/Loader";
 import "./assets/index.scss";
 import Main from "./layouts/App/App";
+import "antd/dist/antd.css";
 
 
 function App() {

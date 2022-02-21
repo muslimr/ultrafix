@@ -23,7 +23,7 @@ export default function MyInput(props) {
     const classes = useStyles();
 
     return (
-        <div className={classes.root} style={containerStyle}>
+        <div className={classes.root} style={containerStyle} >
             <TextField id="outlined-search"
                        label={label}
                        type="search"
@@ -31,6 +31,7 @@ export default function MyInput(props) {
                        value={value}
                        onChange={onChange}
                        style={style}
+                       {...props}
             />
         </div>
     );

@@ -1,0 +1,28 @@
+
+.email_box {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  right: 60px;
+  width: 290px;
+  height: 50px;
+  background: linear-gradient(268.06deg, rgba(231, 60, 126, 0.8) 4.67%, rgba(82, 118, 238, 0.8) 93.54%);
+  backdrop-filter: blur(10px);
+  border-radius: 15px 15px 0px 0px;
+  animation: animated_box 5s ease infinite;
+
+  @keyframes animated_box {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
