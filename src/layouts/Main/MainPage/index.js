@@ -246,7 +246,8 @@ const MainPage = () => {
                     <Row xs="2" sm="2" md="3" lg="4" xl="5">
                         {
                             serviceBoxes.map((item, index) =>
-                                <Link className='service-box-container' to={item.value}>
+                                // <Link className='service-box-container' to={item.value}>
+                                <div className='service-box-container'>
                                     <div className='service-box'>
                                         <MyServiceIcon
                                             name={item?.title?.toLowerCase()}
@@ -254,7 +255,8 @@ const MainPage = () => {
                                         />
                                     </div>
                                     <div className='service-box-label'>{item?.title}</div>
-                                </Link>
+                                </div>
+                                // </Link>
                             )
                         }
                     </Row>
