@@ -75,6 +75,10 @@ const MobView = (props) => {
                     <img src={`/assets/SVG/calling-phone.svg`} style={{width: 35, marginRight: 15, marginBottom: 10}}/>
                     (832) 998-0886
                 </div>
+
+                <div style={{fontSize: "1.5rem", lineHeight: 1.1, marginTop: 70, marginBottom: 20, fontWeight: 500, textAlign: "end", color: '#8B9CB6'}}>
+                    Submit a Service Request
+                </div>
             </div>
             <div style={{
                 width: "100%",
@@ -181,9 +185,14 @@ const WebView = (props) => {
                 </div>
                 <div style={{
                     padding: 50,
+                    paddingTop: 0,
                     backgroundColor: "#fff",
                     borderRadius: 10,
                 }}>
+                    <div style={{fontSize: "1.5rem", lineHeight: 1.1, marginTop: 70, marginBottom: 20, fontWeight: 500, textAlign: "end", color: '#8B9CB6'}}>
+                        Submit a Service Request
+                    </div>
+
                     <div style={{marginBottom: 20}}>
                         <MyInput label={'Full name'}
                                  value={state.dataToSend.name}

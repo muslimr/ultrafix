@@ -94,34 +94,34 @@ const MainPage = () => {
                                 <b style={{fontSize: 22, marginLeft: 7, marginRight: 5, fontWeight: 600,}}>TOP SERVICES</b>
                             </div>
                             <a href={'https://www.google.com/search?q=ultrafix+appliance&sxsrf=APq-WBtcCRDzmeTAjH7ePBS6WiTWFra93A%3A1646589392609&source=hp&ei=0PUkYqHRIq-Sxc8Pwba2sAw&iflsig=AHkkrS4AAAAAYiUD4H65jxuJBgACYy-eYkjhOP9-TZtA&oq=ultrafix&gs_lcp=Cgdnd3Mtd2l6EAEYADIECCMQJzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDoGCCMQJxATOgsILhCABBDHARCjAjoLCC4QgAQQxwEQ0QM6CAguEIAEENQCOgsILhCABBDHARCvAToFCC4QgAQ6DgguEIAEEMcBEK8BENQCOgsILhDHARCvARDLAToFCAAQywE6DgguEMcBEK8BENQCEMsBOgoILhDUAhAKEMsBUABYxwZg9BJoAHAAeACAAZ4BiAHNCJIBAzAuOJgBAKABAQ&sclient=gws-wiz#lrd=0x8640c33ffbd59fcd:0x86ed469b52b0e240,1,,,'}>
-                                <Tooltip title={'We are at Google'}>
+                                {/*<Tooltip title={'We are at Google'}>*/}
                                     <img alt={""} src={`/assets/PNG/ul-google.png`}
                                          style={{cursor: 'pointer', height: 40, marginRight: 15, marginBottom: 15}}/>
-                                </Tooltip>
+                                {/*</Tooltip>*/}
                             </a>
                             <a href={'https://www.bbb.org/us/tx/houston/profile/appliance-repair/ultrafix-appliance-repair-0915-90064027'}>
-                                <Tooltip title={'We are at Best Business Bureau'}>
+                                {/*<Tooltip title={'We are at Best Business Bureau'}>*/}
                                     <img alt={""} src={`/assets/PNG/ul-bbb.png`}
                                          style={{cursor: 'pointer', height: 40, marginRight: 15, marginBottom: 15}}/>
-                                </Tooltip>
+                                {/*</Tooltip>*/}
                             </a>
                             <a href={'https://www.bestpickreports.com/appliance-repair/houston/ultrafix-appliance-repair'}>
-                                <Tooltip title={'We are at Best Pick Reports'}>
+                                {/*<Tooltip title={'We are at Best Pick Reports'}>*/}
                                     <img alt={""} src={`/assets/PNG/ul-best-pick.png`}
                                          style={{cursor: 'pointer', height: 40, marginRight: 15, marginBottom: 15}}/>
-                                </Tooltip>
+                                {/*</Tooltip>*/}
                             </a>
                             <a href={'https://www.yelp.com/biz/ultrafix-appliance-repair-houston'}>
-                                <Tooltip title={'We are at Yelp'}>
+                                {/*<Tooltip title={'We are at Yelp'}>*/}
                                     <img alt={""} src={`/assets/PNG/ul-yelp.png`}
                                          style={{cursor: 'pointer', height: 40, marginRight: 15, marginBottom: 15}}/>
-                                </Tooltip>
+                                {/*</Tooltip>*/}
                             </a>
                             <a href={'https://www.thumbtack.com/tx/houston/appliance-repair/ultrafix-appliance-repair-llc/service/428552679308009500?utm_medium=web&utm_source=txt&surface=sp'}>
-                                <Tooltip title={'We are at Thumbtack'}>
+                                {/*<Tooltip title={'We are at Thumbtack'}>*/}
                                     <img alt={""} src={`/assets/PNG/ul-thumbtack.png`}
                                          style={{cursor: 'pointer', height: 40, marginRight: 15, marginBottom: 15}}/>
-                                </Tooltip>
+                                {/*</Tooltip>*/}
                             </a>
                         </div>
                     }
@@ -173,7 +173,7 @@ const MainPage = () => {
                             <b style={{fontSize: 22, marginLeft: 7, marginRight: 5, fontWeight: 600,}}>TOP SERVICES</b>
                         </div>
 
-                        <a href={'https://www.google.com/search?q=ultrafix+appliance&sxsrf=APq-WBtcCRDzmeTAjH7ePBS6WiTWFra93A%3A1646589392609&source=hp&ei=0PUkYqHRIq-Sxc8Pwba2sAw&iflsig=AHkkrS4AAAAAYiUD4H65jxuJBgACYy-eYkjhOP9-TZtA&oq=ultrafix&gs_lcp=Cgdnd3Mtd2l6EAEYADIECCMQJzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDoGCCMQJxATOgsILhCABBDHARCjAjoLCC4QgAQQxwEQ0QM6CAguEIAEENQCOgsILhCABBDHARCvAToFCC4QgAQ6DgguEIAEEMcBEK8BENQCOgsILhDHARCvARDLAToFCAAQywE6DgguEMcBEK8BENQCEMsBOgoILhDUAhAKEMsBUABYxwZg9BJoAHAAeACAAZ4BiAHNCJIBAzAuOJgBAKABAQ&sclient=gws-wiz#lrd=0x8640c33ffbd59fcd:0x86ed469b52b0e240,1,,,'}>
+                        <a href={'https://www.google.com/search?q=ultrafix+appliance+repair&rlz=1C5CHFA_enAZ963AZ963&sxsrf=APq-WBssJpKsgnoLNInPVzokEE5Ly-oBww%3A1646594356729&ei=NAklYvOALKjprgTzxrXABA&ved=0ahUKEwjz6uL9mbL2AhWotIsKHXNjDUgQ4dUDCA4&oq=ultrafix+appliance+repair&gs_lcp=Cgdnd3Mtd2l6EAxKBAhBGABKBAhGGABQAFgAYABoAHAAeACAAQCIAQCSAQCYAQA&sclient=gws-wiz#lrd=0x8640c33ffbd59fcd:0x86ed469b52b0e240,1,,,'}>
                             <Tooltip title={'We are at Google'}>
                                 <img alt={""} src={`/assets/PNG/ul-google.png`}
                                      style={{cursor: 'pointer', height: 60, marginRight: 10}}/>
