@@ -70,32 +70,57 @@ const MainPage = () => {
 
     return(
         <div className='d-flex flex-column align-items-center' style={{minHeight: '100vh'}}>
-            <div className='d-flex align-items-end'
-                 style={{
+            <div
+                style={{
                      position: 'relative',
+                     zIndex: 100,
                      width: '100%',
-                     minHeight: breakpoint === "sm" ? 200 : 450,
+                     minHeight: breakpoint === "sm" ? 300 : 450,
                      marginTop: breakpoint === "sm" ? 70 : 90,
                      background: 'linear-gradient(to right, #2583F0, #0551A8)'
                  }}
             >
                 <img src={`/assets/SVG/Ultrafix-icon-for-bg.svg`}
-                     style={{position: 'absolute', width: breakpoint === "sm" ? 250 : 500}}
+                     style={{position: 'absolute', width: breakpoint === "sm" ? 250 : 500, bottom: 0}}
                 />
-
-                <div style={{position: 'absolute', marginBottom: 40, marginLeft: 70, borderRadius: 10,}}>
-                    <div style={{fontSize: 20, fontWeight: 300, color: '#fff', marginBottom: 10}}>
-                        We have been providing
-                        <b style={{fontSize: 22, marginLeft: 7, marginRight: 5, fontWeight: 600,}}>TOP SERVICES</b>
-                    </div>
-                    <img src={`/assets/PNG/recomended.png`}
-                         style={{width: breakpoint === "sm" ? 150 : 600}}
-                    />
-                </div>
 
                 <div className={`d-flex flex-column align-items-end p-${breakpoint === "sm" ? "4" : "5"}`}
                      style={{zIndex: 5, width: '100%'}}
                 >
+                    {
+                        breakpoint === "sm" &&
+                        <div style={{position: 'relative', marginBottom: 40, borderRadius: 10,}}>
+                            <div style={{fontSize: 20, fontWeight: 300, color: '#fff', marginBottom: 10}}>
+                                We have been providing
+                                <b style={{fontSize: 22, marginLeft: 7, marginRight: 5, fontWeight: 600,}}>TOP SERVICES</b>
+                            </div>
+                            <a href={'https://www.google.com/search?q=ultrafix+appliance&sxsrf=APq-WBtcCRDzmeTAjH7ePBS6WiTWFra93A%3A1646589392609&source=hp&ei=0PUkYqHRIq-Sxc8Pwba2sAw&iflsig=AHkkrS4AAAAAYiUD4H65jxuJBgACYy-eYkjhOP9-TZtA&oq=ultrafix&gs_lcp=Cgdnd3Mtd2l6EAEYADIECCMQJzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDoGCCMQJxATOgsILhCABBDHARCjAjoLCC4QgAQQxwEQ0QM6CAguEIAEENQCOgsILhCABBDHARCvAToFCC4QgAQ6DgguEIAEEMcBEK8BENQCOgsILhDHARCvARDLAToFCAAQywE6DgguEMcBEK8BENQCEMsBOgoILhDUAhAKEMsBUABYxwZg9BJoAHAAeACAAZ4BiAHNCJIBAzAuOJgBAKABAQ&sclient=gws-wiz#lrd=0x8640c33ffbd59fcd:0x86ed469b52b0e240,1,,,'}>
+                                <Tooltip title={'We are at Google'}>
+                                    <img alt={""} src={`/assets/PNG/ul-google.png`}
+                                         style={{cursor: 'pointer', height: 30, marginRight: 10}}/>
+                                </Tooltip>
+                            </a>
+                            <a href={'https://www.bestpickreports.com/appliance-repair/houston/ultrafix-appliance-repair'}>
+                                <Tooltip title={'We are at Best Pick Reports'}>
+                                    <img alt={""} src={`/assets/PNG/ul-best-pick.png`}
+                                         style={{cursor: 'pointer', height: 30, marginRight: 10}}/>
+                                </Tooltip>
+                            </a>
+                            <a href={'https://www.yelp.com/biz/ultrafix-appliance-repair-houston'}>
+                                <Tooltip title={'We are at Yelp'}>
+                                    <img alt={""} src={`/assets/PNG/ul-yelp.png`}
+                                         style={{cursor: 'pointer', height: 30, marginRight: 10}}/>
+                                </Tooltip>
+                            </a>
+                            <a href={'https://www.yelp.com/biz/ultrafix-appliance-repair-houston'}>
+                                <Tooltip title={'We are at Best Business Bureau'}>
+                                    <img alt={""} src={`/assets/PNG/ul-bbb.png`}
+                                         style={{cursor: 'pointer', height: 30, marginRight: 10}}/>
+                                </Tooltip>
+                            </a>
+                        </div>
+                    }
+
                     <div className={"main-slogan"}>Make Appliances Great Again !</div>
 
                     <div className={`d-flex flex-column align-items-${breakpoint === "sm" ? "start" : "end"}`} style={{width: "100%"}}>
@@ -133,12 +158,68 @@ const MainPage = () => {
                         </div>
                     </div>
                 </div>
+
+
+                {
+                    breakpoint !== "sm" &&
+                    <div style={{width: '100%', position: 'relative', marginBottom: 40, marginLeft: 70, borderRadius: 10,}}>
+                        <div style={{fontSize: 20, fontWeight: 300, color: '#fff', marginBottom: 10}}>
+                            We have been providing
+                            <b style={{fontSize: 22, marginLeft: 7, marginRight: 5, fontWeight: 600,}}>TOP SERVICES</b>
+                        </div>
+
+                        <a href={'https://www.google.com/search?q=ultrafix+appliance&sxsrf=APq-WBtcCRDzmeTAjH7ePBS6WiTWFra93A%3A1646589392609&source=hp&ei=0PUkYqHRIq-Sxc8Pwba2sAw&iflsig=AHkkrS4AAAAAYiUD4H65jxuJBgACYy-eYkjhOP9-TZtA&oq=ultrafix&gs_lcp=Cgdnd3Mtd2l6EAEYADIECCMQJzIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDoGCCMQJxATOgsILhCABBDHARCjAjoLCC4QgAQQxwEQ0QM6CAguEIAEENQCOgsILhCABBDHARCvAToFCC4QgAQ6DgguEIAEEMcBEK8BENQCOgsILhDHARCvARDLAToFCAAQywE6DgguEMcBEK8BENQCEMsBOgoILhDUAhAKEMsBUABYxwZg9BJoAHAAeACAAZ4BiAHNCJIBAzAuOJgBAKABAQ&sclient=gws-wiz#lrd=0x8640c33ffbd59fcd:0x86ed469b52b0e240,1,,,'}>
+                            <Tooltip title={'We are at Google'}>
+                                <img alt={""} src={`/assets/PNG/ul-google.png`}
+                                     style={{cursor: 'pointer', height: 60, marginRight: 10}}/>
+                            </Tooltip>
+                        </a>
+                        <a href={'https://www.bestpickreports.com/appliance-repair/houston/ultrafix-appliance-repair'}>
+                            <Tooltip title={'We are at Best Pick Reports'}>
+                                <img alt={""} src={`/assets/PNG/ul-best-pick.png`}
+                                     style={{cursor: 'pointer', height: 60, marginRight: 10}}/>
+                            </Tooltip>
+                        </a>
+                        <a href={'https://www.yelp.com/biz/ultrafix-appliance-repair-houston'}>
+                            <Tooltip title={'We are at Yelp'}>
+                                <img alt={""} src={`/assets/PNG/ul-yelp.png`}
+                                     style={{cursor: 'pointer', height: 60, marginRight: 10}}/>
+                            </Tooltip>
+                        </a>
+                        <a href={'https://www.yelp.com/biz/ultrafix-appliance-repair-houston'}>
+                            <Tooltip title={'We are at Best Business Bureau'}>
+                                <img alt={""} src={`/assets/PNG/ul-bbb.png`}
+                                     style={{cursor: 'pointer', height: 60, marginRight: 10}}/>
+                            </Tooltip>
+                        </a>
+                    </div>
+                }
             </div>
+
 
             {/**  SERVICES section  **/}
             <div id={"services"}/>
 
             <div className='d-flex flex-column w-100' style={{backgroundColor: '#EFF2F4'}}>
+                {/**  EMAIL box for mobile view **/
+                    breakpoint === "sm" &&
+                    <Tooltip title={emailTooltipText}>
+                        <div
+                            className="email_box"
+                            onClick={() => {
+                                navigator.clipboard.writeText("info@ultrafixappliance.com");
+                                setEmailTooltipText('Copied');
+                            }}
+                            onMouseOver={() => setEmailTooltipText('Click to copy')}
+                        >
+                            <img src={`/assets/SVG/email-icon.svg`}
+                                 style={{width: 20, marginRight: 10}}
+                            />
+                            <div style={{fontSize: 18, color: '#fff',}}>info@ultrafixappliance.com</div>
+                        </div>
+                    </Tooltip>
+                }
+
                 <div style={breakpoint === "sm" ? {marginLeft: 25, marginTop: 40} : {marginLeft: 100, marginTop: 50}}>
                     <div style={{
                         fontSize: breakpoint === "sm" ? 30 : 42,
@@ -196,22 +277,24 @@ const MainPage = () => {
             <div id={"whyus"} style={{marginBottom: breakpoint !== "sm" && 50}}/>
             <WhyUs />
 
-            {/**  Fixed EMAIL box  **/}
-            <Tooltip title={emailTooltipText}>
-                <div
-                    className="email_box"
-                    onClick={() => {
-                        navigator.clipboard.writeText("info@ultrafixappliance.com");
-                        setEmailTooltipText('Copied');
-                    }}
-                    onMouseOver={() => setEmailTooltipText('Click to copy')}
-                >
-                    <img src={`/assets/SVG/email-icon.svg`}
-                         style={{width: 20, marginRight: 10}}
-                    />
-                    <div style={{fontSize: 18, color: '#fff',}}>info@ultrafixappliance.com</div>
-                </div>
-            </Tooltip>
+            {/**  Fixed EMAIL box  **/
+                breakpoint !== "sm" &&
+                <Tooltip title={emailTooltipText}>
+                    <div
+                        className="email_box"
+                        onClick={() => {
+                            navigator.clipboard.writeText("info@ultrafixappliance.com");
+                            setEmailTooltipText('Copied');
+                        }}
+                        onMouseOver={() => setEmailTooltipText('Click to copy')}
+                    >
+                        <img src={`/assets/SVG/email-icon.svg`}
+                             style={{width: 20, marginRight: 10}}
+                        />
+                        <div style={{fontSize: 18, color: '#fff',}}>info@ultrafixappliance.com</div>
+                    </div>
+                </Tooltip>
+            }
         </div>
     );
 }

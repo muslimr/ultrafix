@@ -25,4 +25,14 @@
       background-position: 0% 50%;
     }
   }
+
+  @media (max-width: 768px) {
+    right: 0;
+    width: 100%;
+    position: relative;
+    border-radius: 0px;
+    justify-content: flex-end;
+    padding-right: 20px;
+    height: 40px;
+  }
 }
