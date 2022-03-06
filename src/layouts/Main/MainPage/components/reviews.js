@@ -40,13 +40,13 @@ const MobView = () => {
                 <img src={'/assets/PNG/reviews_mob.png'} style={{height: '100%', width: '100%', marginBottom: 30, marginTop: 20}}/>
             </div>
 
-            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginBottom: 40}}>
-                <a style={{backgroundColor: '#00ABF4', color: '#fff', fontSize: 20, fontWeight: '500', textDecoration: 'none', padding: '10px 30px', borderRadius: 5}}
-                   href={'https://www.google.com/search?q=ultrafix+appliance&rlz=1C5CHFA_enAZ963AZ963&oq=ultrafix+appliance&aqs=chrome..69i57j46i175i199i512j0i512l2j69i60l3.3265j0j7&sourceid=chrome&ie=UTF-8#lrd=0x8640c33ffbd59fcd:0x86ed469b52b0e240,1,,,'}
-                >
-                    Show More
-                </a>
-            </div>
+            {/*<div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', marginBottom: 40}}>*/}
+            {/*    <a style={{backgroundColor: '#00ABF4', color: '#fff', fontSize: 20, fontWeight: '500', textDecoration: 'none', padding: '10px 30px', borderRadius: 5}}*/}
+            {/*       href={'https://www.google.com/search?q=ultrafix+appliance&rlz=1C5CHFA_enAZ963AZ963&oq=ultrafix+appliance&aqs=chrome..69i57j46i175i199i512j0i512l2j69i60l3.3265j0j7&sourceid=chrome&ie=UTF-8#lrd=0x8640c33ffbd59fcd:0x86ed469b52b0e240,1,,,'}*/}
+            {/*    >*/}
+            {/*        Show More*/}
+            {/*    </a>*/}
+            {/*</div>*/}
         </div>
     );
 }
@@ -70,13 +70,13 @@ const WebView = () => {
                 <img src={'/assets/PNG/reviews.png'} style={{height: '100%', width: '100%'}}/>
             </div>
 
-            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-                <a style={{backgroundColor: '#00ABF4', color: '#fff', fontSize: 20, fontWeight: '500', textDecoration: 'none', padding: '10px 30px', borderRadius: 5}}
-                    href={'https://www.google.com/search?q=ultrafix+appliance&rlz=1C5CHFA_enAZ963AZ963&oq=ultrafix+appliance&aqs=chrome..69i57j46i175i199i512j0i512l2j69i60l3.3265j0j7&sourceid=chrome&ie=UTF-8#lrd=0x8640c33ffbd59fcd:0x86ed469b52b0e240,1,,,'}
-                >
-                    Show More
-                </a>
-            </div>
+            {/*<div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>*/}
+            {/*    <a style={{backgroundColor: '#00ABF4', color: '#fff', fontSize: 20, fontWeight: '500', textDecoration: 'none', padding: '10px 30px', borderRadius: 5}}*/}
+            {/*        href={'https://www.google.com/search?q=ultrafix+appliance&rlz=1C5CHFA_enAZ963AZ963&oq=ultrafix+appliance&aqs=chrome..69i57j46i175i199i512j0i512l2j69i60l3.3265j0j7&sourceid=chrome&ie=UTF-8#lrd=0x8640c33ffbd59fcd:0x86ed469b52b0e240,1,,,'}*/}
+            {/*    >*/}
+            {/*        Show More*/}
+            {/*    </a>*/}
+            {/*</div>*/}
         </div>
     );
 }

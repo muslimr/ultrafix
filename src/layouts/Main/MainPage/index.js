@@ -73,7 +73,6 @@ const MainPage = () => {
             <div
                 style={{
                      position: 'relative',
-                     zIndex: 100,
                      width: '100%',
                      minHeight: breakpoint === "sm" ? 300 : 450,
                      marginTop: breakpoint === "sm" ? 70 : 90,
@@ -100,6 +99,12 @@ const MainPage = () => {
                                          style={{cursor: 'pointer', height: 40, marginRight: 15, marginBottom: 15}}/>
                                 </Tooltip>
                             </a>
+                            <a href={'https://www.bbb.org/us/tx/houston/profile/appliance-repair/ultrafix-appliance-repair-0915-90064027'}>
+                                <Tooltip title={'We are at Best Business Bureau'}>
+                                    <img alt={""} src={`/assets/PNG/ul-bbb.png`}
+                                         style={{cursor: 'pointer', height: 40, marginRight: 15, marginBottom: 15}}/>
+                                </Tooltip>
+                            </a>
                             <a href={'https://www.bestpickreports.com/appliance-repair/houston/ultrafix-appliance-repair'}>
                                 <Tooltip title={'We are at Best Pick Reports'}>
                                     <img alt={""} src={`/assets/PNG/ul-best-pick.png`}
@@ -109,12 +114,6 @@ const MainPage = () => {
                             <a href={'https://www.yelp.com/biz/ultrafix-appliance-repair-houston'}>
                                 <Tooltip title={'We are at Yelp'}>
                                     <img alt={""} src={`/assets/PNG/ul-yelp.png`}
-                                         style={{cursor: 'pointer', height: 40, marginRight: 15, marginBottom: 15}}/>
-                                </Tooltip>
-                            </a>
-                            <a href={'https://www.thumbtack.com/tx/houston/appliance-repair/ultrafix-appliance-repair-llc/service/428552679308009500?utm_medium=web&utm_source=txt&surface=sp'}>
-                                <Tooltip title={'We are at Best Business Bureau'}>
-                                    <img alt={""} src={`/assets/PNG/ul-bbb.png`}
                                          style={{cursor: 'pointer', height: 40, marginRight: 15, marginBottom: 15}}/>
                                 </Tooltip>
                             </a>
@@ -180,6 +179,12 @@ const MainPage = () => {
                                      style={{cursor: 'pointer', height: 60, marginRight: 10}}/>
                             </Tooltip>
                         </a>
+                        <a href={'https://www.bbb.org/us/tx/houston/profile/appliance-repair/ultrafix-appliance-repair-0915-90064027'}>
+                            <Tooltip title={'We are at Best Business Bureau'}>
+                                <img alt={""} src={`/assets/PNG/ul-bbb.png`}
+                                     style={{cursor: 'pointer', height: 60, marginRight: 10}}/>
+                            </Tooltip>
+                        </a>
                         <a href={'https://www.bestpickreports.com/appliance-repair/houston/ultrafix-appliance-repair'}>
                             <Tooltip title={'We are at Best Pick Reports'}>
                                 <img alt={""} src={`/assets/PNG/ul-best-pick.png`}
@@ -189,12 +194,6 @@ const MainPage = () => {
                         <a href={'https://www.yelp.com/biz/ultrafix-appliance-repair-houston'}>
                             <Tooltip title={'We are at Yelp'}>
                                 <img alt={""} src={`/assets/PNG/ul-yelp.png`}
-                                     style={{cursor: 'pointer', height: 60, marginRight: 10}}/>
-                            </Tooltip>
-                        </a>
-                        <a href={'https://www.thumbtack.com/tx/houston/appliance-repair/ultrafix-appliance-repair-llc/service/428552679308009500?utm_medium=web&utm_source=txt&surface=sp'}>
-                            <Tooltip title={'We are at Best Business Bureau'}>
-                                <img alt={""} src={`/assets/PNG/ul-bbb.png`}
                                      style={{cursor: 'pointer', height: 60, marginRight: 10}}/>
                             </Tooltip>
                         </a>
