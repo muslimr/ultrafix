@@ -24,7 +24,7 @@ function App() {
     return(
         <AuthContext.Provider value={{token, login, logout, userId, isAuthenticated}}>
             <Router>
-                <div className='no-select'>
+                <div>
                     <Main/>
                     {routes}
                     <div className='d-flex  justify-content-between'

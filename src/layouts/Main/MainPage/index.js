@@ -14,6 +14,7 @@ import {Tooltip} from "antd";
 
 import './styles/index.scss';
 import {Link} from "react-router-dom";
+import {SERVICES} from "../../../arrays/arrays";
 
 
 
@@ -51,19 +52,6 @@ const MainPage = () => {
         } catch (e) {}
     }, [token, request]);
 
-
-    const serviceBoxes = [
-        {title: 'Refrigerator', value: 'refrigerator'},
-        {title: 'Ice Machine', value: 'ice_machine'},
-        {title: 'Washer', value: 'washer'},
-        {title: 'Dryer', value: 'dyer'},
-        {title: 'Dishwasher', value: 'dishwasher'},
-        {title: 'Oven', value: 'oven'},
-        {title: 'Cooktop', value: 'cooktop'},
-        {title: 'Microwave', value: 'microwave'},
-        {title: 'Wine Cooler', value: 'wine_cooler'},
-        {title: 'Freezer', value: 'freezer'},
-    ];
 
     const {breakpoint} = useWindowDimensions();
 
@@ -245,17 +233,17 @@ const MainPage = () => {
                 <Container fluid style={{padding: breakpoint === "sm" ? "30px 25px" : "40px 80px"}}>
                     <Row xs="2" sm="2" md="3" lg="4" xl="5">
                         {
-                            serviceBoxes.map((item, index) =>
+                            SERVICES.map((item, index) =>
                                 // <Link className='service-box-container' to={item.value}>
-                                <div className='service-box-container'>
-                                    <div className='service-box'>
-                                        <MyServiceIcon
-                                            name={item?.title?.toLowerCase()}
-                                            className={'service-icon'}
-                                        />
+                                    <div className='service-box-container'>
+                                        <div className='service-box'>
+                                            <MyServiceIcon
+                                                name={item?.title?.toLowerCase()}
+                                                className={'service-icon'}
+                                            />
+                                        </div>
+                                        <div className='service-box-label'>{item?.title}</div>
                                     </div>
-                                    <div className='service-box-label'>{item?.title}</div>
-                                </div>
                                 // </Link>
                             )
                         }

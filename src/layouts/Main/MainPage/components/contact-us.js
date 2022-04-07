@@ -101,13 +101,6 @@ const MobView = (props) => {
                         onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, phone: e.target.value}})}
                     />
                 </div>
-                {/*<div style={{marginBottom: 20}}>*/}
-                {/*    <MyInput label={'Email'}*/}
-                {/*        // containerStyle={{minWidth: 400}}*/}
-                {/*        //      value={state.dataToSend.email}*/}
-                {/*        //      onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, email: e.target.value}})}*/}
-                {/*    />*/}
-                {/*</div>*/}
                 <div style={{marginBottom: 20}}>
                     <MyInput label={'Address'}
                              // containerStyle={{minWidth: 400}}

@@ -1,0 +1,6 @@
+- info page must be finished
+- main page image heights
+- text no-select turn off for google keywords
+- onclick email open app
+
+

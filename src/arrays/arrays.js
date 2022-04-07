@@ -53,3 +53,17 @@ export const SUBCATEGORIES = {
 
 }
 
+
+export const SERVICES = [
+    {title: 'Refrigerator', value: 'refrigerator'},
+    {title: 'Ice Machine', value: 'ice_machine'},
+    {title: 'Washer', value: 'washer'},
+    {title: 'Dryer', value: 'dyer'},
+    {title: 'Dishwasher', value: 'dishwasher'},
+    {title: 'Oven', value: 'oven'},
+    {title: 'Cooktop', value: 'cooktop'},
+    {title: 'Microwave', value: 'microwave'},
+    {title: 'Wine Cooler', value: 'wine_cooler'},
+    {title: 'Freezer', value: 'freezer'},
+];
+
