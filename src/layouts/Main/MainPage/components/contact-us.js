@@ -166,7 +166,7 @@ const WebView = (props) => {
                         THE BEST RATED
                     </div>
                     <div style={{fontSize: "2.3rem", fontWeight: 500, textAlign: "end", color: '#8B9CB6'}}>
-                        Appliance Repair Specialists in Houston
+                        Appliance Repair Specialists in Your Neighborhood
                     </div>
                     <div style={{fontSize: "2rem", fontWeight: 500, lineHeight: 1, textAlign: "end", color: '#8B9CB6', marginTop: 70}}>
                         Call Us Now

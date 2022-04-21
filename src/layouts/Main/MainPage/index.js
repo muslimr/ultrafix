@@ -57,15 +57,16 @@ const MainPage = () => {
 
 
     return(
-        <div className='d-flex flex-column align-items-center' style={{minHeight: '100vh'}}>
+        <div className='d-flex flex-column align-items-center' style={{minHeight: '100vh', }}>
             <div
                 style={{
-                     position: 'relative',
-                     width: '100%',
-                     minHeight: breakpoint === "sm" ? 300 : 450,
-                     marginTop: breakpoint === "sm" ? 70 : 90,
-                     background: 'linear-gradient(to right, #2583F0, #0551A8)'
-                 }}
+                    position: 'relative',
+                    width: '100%',
+                    overflow: 'hidden',
+                    minHeight: breakpoint === "sm" ? 300 : 450,
+                    marginTop: breakpoint === "sm" ? 70 : 90,
+                    background: 'linear-gradient(to right, #2583F0, #0551A8)'
+                }}
             >
                 <img src={`/assets/SVG/Ultrafix-icon-for-bg.svg`}
                      style={{position: 'absolute', width: breakpoint === "sm" ? 250 : 500, bottom: 0}}
@@ -234,7 +235,9 @@ const MainPage = () => {
                     <Row xs="2" sm="2" md="3" lg="4" xl="5">
                         {
                             SERVICES.map((item, index) =>
-                                // <Link className='service-box-container' to={item.value}>
+                                <Link className='service-box-container'
+                                      // to={item.value}
+                                >
                                     <div className='service-box-container'>
                                         <div className='service-box'>
                                             <MyServiceIcon
@@ -244,7 +247,7 @@ const MainPage = () => {
                                         </div>
                                         <div className='service-box-label'>{item?.title}</div>
                                     </div>
-                                // </Link>
+                                </Link>
                             )
                         }
                     </Row>

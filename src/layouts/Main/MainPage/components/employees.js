@@ -6,7 +6,7 @@ import DateLib from "../../../../plugins/DateLib";
 
 const employees = [
     {image: '/assets/PNG/employee1.jpg', name: 'Aydin'},
-    {image: '/assets/PNG/employee2.jpg', name: 'Orkhan'},
+    {image: '/assets/PNG/employee2.jpg', name: 'Oreck'},
     {image: '/assets/PNG/employee3.jpg', name: 'Mack'},
 ];
 

@@ -47,7 +47,7 @@ function Main() {
 
     return(
         <AuthContext.Provider value={{token, login, logout, userId, isAuthenticated}}>
-        <div className='no-select'>
+        <div>
             {
                 location.pathname.split('/')[1] === 'adminPanel'
                     ?

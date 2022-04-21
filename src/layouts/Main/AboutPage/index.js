@@ -31,10 +31,30 @@ const AboutPage = ({type = ''}) => {
     const [emailTooltipText, setEmailTooltipText] = useState('Click to copy');
 
     return(
-        <div >
-            <div style={{padding: 100}}>{type}</div>
+        <div style={{position: 'relative'}}>
+            <img src={`/assets/PNG/services/refrigerators.png`}
+                 style={{width: '100%', bottom: 0}}
+            />
 
-            <div style={{display: 'flex', backgroundColor: 'red'}}>
+            <div style={{
+                position: 'absolute',
+                top: 700,
+                background: 'rgba(0, 0, 0, 0.3)',
+                backdropFilter: 'blur(50px)',
+                /* Note: backdrop-filter has minimal browser support */
+                borderRadius: 30,
+            }}>
+                <div style={{width : '100%'}}>
+                    <div>
+                        Refrigerators
+                    </div>
+                    <div>
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                    </div>
+                </div>
+            </div>
+
+            <div style={{display: 'flex'}}>
                 <div style={{color: '#003168', fontSize: 16, lineHeight: 1.4, margin: 45}}>
                     Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
                     Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
