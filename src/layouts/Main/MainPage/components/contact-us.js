@@ -65,8 +65,8 @@ const MobView = (props) => {
                 <div style={{fontSize: "2.6rem", lineHeight: 1.2, fontWeight: 600, textAlign: "end"}}>
                     THE BEST RATED
                 </div>
-                <div style={{fontSize: "1.8rem", lineHeight: 1.1, marginTop: 10, fontWeight: 500, textAlign: "end", color: '#8B9CB6'}}>
-                    Appliance Repair Specialists in Houston
+                <div style={{fontSize: "1.5rem", lineHeight: 1.1, marginTop: 10, fontWeight: 500, textAlign: "end", color: '#8B9CB6'}}>
+                    Appliance Repair Specialists in Your Neighborhood
                 </div>
                 <div style={{fontSize: "1.5rem", lineHeight: 1.1, marginTop: 40, fontWeight: 500, textAlign: "end", color: '#8B9CB6'}}>
                     Call Us Now

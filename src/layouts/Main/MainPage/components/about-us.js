@@ -11,6 +11,13 @@ const images = [
     {original: '/assets/JPG/appliances4.jpg'},
 ];
 
+const images_mob = [
+    {original: '/assets/JPG/appliances1_mob.jpg'},
+    {original: '/assets/JPG/appliances2_mob.jpg'},
+    {original: '/assets/JPG/appliances3_mob.jpg'},
+    {original: '/assets/JPG/appliances4_mob.jpg'},
+];
+
 
 export default function AboutUs(props) {
     const {breakpoint} = useWindowDimensions();
@@ -48,7 +55,7 @@ const MobView = (props) => {
                 in Houston can better your life today!
             </div>
             <div style={{width: "100%"}}>
-                <ImageGallery items={images}
+                <ImageGallery items={images_mob}
                               fullscreen={true}
                               autoPlay={true}
                               showFullscreenButton={false}

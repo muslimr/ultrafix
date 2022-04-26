@@ -232,7 +232,6 @@ const MainPage = () => {
                 </div>
 
                 <Container fluid style={{padding: breakpoint === "sm" ? "30px 25px" : "40px 80px"}}>
-
                     <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between'}}>
                         {
                             SERVICES.map((item, index) =>
