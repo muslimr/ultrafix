@@ -17,10 +17,17 @@ function getRandomItems() {
 }
 
 function getMonth() {
+    let id;
     if (DateLib.date('d') < 25) {
-        return DateLib.date('Pr');
+        id = DateLib.date('m') - 2;
+        if (id == -1) id = 11;
+        if (id == -2) id = 10;
+    } else {
+        id = DateLib.date('m') - 1;
+        if (id == -1) id = 11;
     }
-    return DateLib.date('Th');
+
+    return DateLib.getMonth(id);
 }
 
 
@@ -42,7 +49,7 @@ export default function Employees(props) {
 const MobView = () => {
     return(
         <div className='w-100' style={{backgroundColor: '#fff'}}>
-            <div style={{marginLeft: 25, marginTop: 40}}>
+            <div style={{marginLeft: 25, marginRight: 20, marginTop: 40}}>
                 <div style={{fontSize: 30, fontWeight: 600, lineHeight: 1.1, marginBottom: 10, color: '#003168',}}>
                     The Best Employees of {getMonth()}
                 </div>
@@ -92,7 +99,7 @@ const Employee = ({image, name}) => {
                 breakpoint === "sm"
                     ?
                     <div className='d-flex flex-column align-items-center'>
-                        <img src={image} style={{width: 93, height: 93}}/>
+                        <img src={image} style={{width: 100, height: 100}}/>
                         <div style={{fontSize: 20, marginTop: 10, color: '#84A3C7'}}>{name}</div>
                     </div>
                     :

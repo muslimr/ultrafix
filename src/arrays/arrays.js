@@ -10,60 +10,16 @@ export const CATEGORIES = [
 ];
 
 
-export const SUBCATEGORIES = {
-    ZELEN: {
-        label: 'Зелень',
-        img: '/assets/zelen.png',
-        description: 'Заказать оптом напрямую от производителя! Доставка по России и СНГ, самовывоз, свободный сток! Наличие на складах и возможность заказа уточняйте у наших менеджеров.',
-        list: [
-            {title: 'Аралия', title2: 'Aralia', subtitle: '7 товаров', img: '/assets/zelen.png', color: '#E5EAD5', link: 'zelen'},
-            {title: 'Аспарагус', title2: 'Asparagus', subtitle: null, img: '/assets/zelen.png', color: '#E5EAD5', link: 'zelen'},
-            {title: 'Аспидистра', title2: 'Aspidistra', subtitle: '3 товара', img: '/assets/zelen.png', color: '#E5EAD5', link: 'zelen'},
-            {title: 'Аралия', title2: 'Aralia', subtitle: '7 товаров', img: '/assets/zelen.png', color: '#E5EAD5', link: 'zelen'},
-            {title: 'Аспарагус', title2: 'Asparagus', subtitle: null, img: '/assets/zelen.png', color: '#E5EAD5', link: 'zelen'},
-            {title: 'Аспидистра', title2: 'Aspidistra', subtitle: '3 товара', img: '/assets/zelen.png', color: '#E5EAD5', link: 'zelen'},
-        ],
-    },
-    ROZI: {
-        label: 'Розы',
-        img: '/assets/roza.png',
-        description: 'Заказать оптом напрямую от производителя! Доставка по России и СНГ, самовывоз, свободный сток! Наличие на складах и возможность заказа уточняйте у наших менеджеров.',
-        list: [
-            {title: 'Аралия', title2: 'Aralia', subtitle: '7 товаров', img: '/assets/roza.png', color: '#F5E4E1', link: 'zelen'},
-            {title: 'Аспарагус', title2: 'Asparagus', subtitle: null, img: '/assets/roza.png', color: '#F5E4E1', link: 'zelen'},
-            {title: 'Аспидистра', title2: 'Aspidistra', subtitle: '3 товара', img: '/assets/roza.png', color: '#F5E4E1', link: 'zelen'},
-            {title: 'Аралия', title2: 'Aralia', subtitle: '7 товаров', img: '/assets/roza.png', color: '#F5E4E1', link: 'zelen'},
-            {title: 'Аспарагус', title2: 'Asparagus', subtitle: null, img: '/assets/roza.png', color: '#F5E4E1', link: 'zelen'},
-            {title: 'Аспидистра', title2: 'Aspidistra', subtitle: '3 товара', img: '/assets/roza.png', color: '#F5E4E1', link: 'zelen'},
-        ],
-    },
-    SUXOCVET: {
-        label: 'Сухоцвет',
-        img: '/assets/xrizantema.png',
-        description: 'Заказать оптом напрямую от производителя! Доставка по России и СНГ, самовывоз, свободный сток! Наличие на складах и возможность заказа уточняйте у наших менеджеров.',
-        list: [
-            {title: 'Аралия', title2: 'Aralia', subtitle: '7 товаров', img: '/assets/xrizantema.png', color: '#EAE2DB', link: 'zelen'},
-            {title: 'Аспарагус', title2: 'Asparagus', subtitle: null, img: '/assets/xrizantema.png', color: '#EAE2DB', link: 'zelen'},
-            {title: 'Аспидистра', title2: 'Aspidistra', subtitle: '3 товара', img: '/assets/xrizantema.png', color: '#EAE2DB', link: 'zelen'},
-            {title: 'Аралия', title2: 'Aralia', subtitle: '7 товаров', img: '/assets/xrizantema.png', color: '#EAE2DB', link: 'zelen'},
-            {title: 'Аспарагус', title2: 'Asparagus', subtitle: null, img: '/assets/xrizantema.png', color: '#EAE2DB', link: 'zelen'},
-            {title: 'Аспидистра', title2: 'Aspidistra', subtitle: '3 товара', img: '/assets/xrizantema.png', color: '#EAE2DB', link: 'zelen'},
-        ],
-    },
-
-}
-
-
 export const SERVICES = [
-    {title: 'Refrigerator', value: 'refrigerator'},
-    {title: 'Ice Machine', value: 'ice_machine'},
-    {title: 'Washer', value: 'washer'},
-    {title: 'Dryer', value: 'dyer'},
-    {title: 'Dishwasher', value: 'dishwasher'},
-    {title: 'Oven', value: 'oven'},
-    {title: 'Cooktop', value: 'cooktop'},
-    {title: 'Microwave', value: 'microwave'},
-    {title: 'Wine Cooler', value: 'wine_cooler'},
-    {title: 'Freezer', value: 'freezer'},
+    {title: 'Refrigerator', value: 'refrigerator', mobWidth: 40},
+    {title: 'Ice Machine', value: 'ice_machine', mobWidth: 40},
+    {title: 'Washer', value: 'washer', mobWidth: 46},
+    {title: 'Dryer', value: 'dyer', mobWidth: 46},
+    {title: 'Dishwasher', value: 'dishwasher', mobWidth: 46},
+    {title: 'Oven', value: 'oven', mobWidth: 46},
+    {title: 'Cooktop', value: 'cooktop', mobWidth: 50},
+    {title: 'Microwave', value: 'microwave', mobWidth: 65},
+    {title: 'Wine Cooler', value: 'wine_cooler', mobWidth: 40},
+    {title: 'Freezer', value: 'freezer', mobWidth: 40},
 ];
 

@@ -232,25 +232,23 @@ const MainPage = () => {
                 </div>
 
                 <Container fluid style={{padding: breakpoint === "sm" ? "30px 25px" : "40px 80px"}}>
-                    <Row xs="2" sm="2" md="3" lg="4" xl="5">
+
+                    <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between'}}>
                         {
                             SERVICES.map((item, index) =>
-                                <Link className='service-box-container'
-                                      // to={item.value}
-                                >
-                                    <div className='service-box-container'>
-                                        <div className='service-box'>
-                                            <MyServiceIcon
-                                                name={item?.title?.toLowerCase()}
-                                                className={'service-icon'}
-                                            />
-                                        </div>
-                                        <div className='service-box-label'>{item?.title}</div>
+                                <div className='service-box-container'>
+                                    <div className='service-box'>
+                                        <MyServiceIcon
+                                            name={item?.title?.toLowerCase()}
+                                            className={'service-icon'}
+                                            style={{width: breakpoint === "sm" ? item.mobWidth : 100}}
+                                        />
                                     </div>
-                                </Link>
+                                    <div className='service-box-label'>{item?.title}</div>
+                                </div>
                             )
                         }
-                    </Row>
+                    </div>
                 </Container>
             </div>
 

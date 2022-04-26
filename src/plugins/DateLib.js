@@ -40,7 +40,7 @@ export default class DateLib {
         let d = date.getDate();
         if (d < 10) d = "0" + d;
         let m = date.getMonth() + 1; //January is 0!
-        if (m < 10) m = "0" + m;
+        // if (m < 10) m = "0" + m;
         let Y = date.getFullYear();
         let H = date.getHours();
         if (H < 10) H = "0" + H;
@@ -70,34 +70,6 @@ export default class DateLib {
 
         DateLib.resetValue()
         return format;
-    }
-
-    static weekday(n) {
-        let date = DateLib.value;
-        let currentDay = DateLib.value.getDay();
-        let distance = n - currentDay;
-        date.setDate(date.getDate() + distance);
-        return this;
-    }
-
-    static startOf(type) {
-        let date = DateLib.value;
-
-        switch (type) {
-            case 'day':
-                DateLib.value.setHours(0, 0, 0, 0);
-                break;
-            case 'week':
-                DateLib.value = DateLib.setToMonday(DateLib.value).setHours(0, 0, 0, 0);
-                break;
-            case 'month':
-                DateLib.value = new Date(date.getFullYear(), date.getMonth(), 1);
-                break;
-            case 'year':
-                DateLib.value = new Date(date.getFullYear(), 0, 1);
-                break;
-        }
-        return this;
     }
 
 
@@ -300,13 +272,13 @@ export default class DateLib {
     }
 
     static getMonth(id) {
-        return DateLib.getMonths()[id - 1];
+        return DateLib.getFullMonth()[id];
     }
 
 
     static getUnixtime() {
         let time = new Date().getTime();
-        time = Math.floor(time / 1000)
+        time = Math.floor(time / 1000);
         return time;
     }
 
@@ -316,9 +288,8 @@ export default class DateLib {
         if (unixtime < 1)
             date = new Date();
         let d = date.getDate();
-        // if (d < 10) d = '0' + d;
         let m = date.getMonth() + 1; //January is 0!
-        if (m < 10) m = '0' + m;
+        // if (m < 10) m = '0' + m;
         let Y = date.getFullYear();
         let H = date.getHours();
         if (H < 10)
@@ -352,30 +323,6 @@ export default class DateLib {
         return format;
     }
 
-    static getWeekNumber(unixtime = 0) {
-        let d = new Date(unixtime * 1000);
-        d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay() || 7));
-        let yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
-        let W = Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
-        return W;
-    }
-
-    static getWeekDay(unixtime = 0, type) {
-        let W = parseInt(DateLib.date("w", unixtime-86400));
-        if (type === 'short') {
-            W = DateLib.getShortWeeks()[W].title;
-        }
-        // W = DateLib.getWeeks()[W].title
-        return W.toString();
-    }
-
-    static toTimestamp(strDate) {
-        if (typeof strDate === 'string')
-            strDate = strDate.replace(/-/gi, '/');
-        let datum = Date.parse(strDate);
-        return datum / 1000;
-    }
-
     // Calculate time elapse from current time
     static elapse(unixtime) {
         let time = new Date().getTime();
@@ -402,16 +349,6 @@ export default class DateLib {
         return {d, h, m, s};
     }
 
-    static convertSeconds(elapse) {
-        let txt = "";
-        let {d, h, m, s} = DateLib.parseElapse(elapse);
-        if (d > 0) txt += 'Day';
-        if (h > 0) txt += 'Hour';
-        if (m > 0 && (h === 0 || d === 0)) txt += 'Minute';
-        if (!m && !h && !d) !s ? (txt += 0 + "") : (txt += 'Second');
-
-        return txt;
-    }
 
     static filterTime(unixtime)
     {
