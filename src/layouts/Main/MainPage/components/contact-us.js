@@ -73,7 +73,7 @@ const MobView = (props) => {
                 </div>
                 <div style={{fontSize: "2rem", textAlign: "end", marginBottom: 30,}}>
                     <img src={`/assets/SVG/calling-phone.svg`} style={{width: 35, marginRight: 15, marginBottom: 10}}/>
-                    (832) 998-0886
+                    (888) 998-6263
                 </div>
 
                 <div style={{fontSize: "1.5rem", lineHeight: 1.1, marginTop: 70, marginBottom: 20, fontWeight: 500, textAlign: "end", color: '#8B9CB6'}}>
@@ -173,7 +173,7 @@ const WebView = (props) => {
                     </div>
                     <div style={{fontSize: 50, textAlign: "end"}}>
                         <img src={`/assets/SVG/calling-phone.svg`} style={{width: 45, marginRight: 30, marginBottom: 10}}/>
-                        (832) 998-0886
+                        (888) 998-6263
                     </div>
                 </div>
                 <div style={{

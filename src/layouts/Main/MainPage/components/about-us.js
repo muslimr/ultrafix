@@ -52,7 +52,7 @@ const MobView = (props) => {
                 Our pledge is to establish lasting relationships with our customers by exceeding their expectations and
                 gaining their trust through exceptional performance by each member of our service team. We have been
                 providing top service! See just how our UltraFix Appliance Repair Service
-                in Houston can better your life today!
+                can better your life today!
             </div>
             <div style={{width: "100%"}}>
                 <ImageGallery items={images_mob}
@@ -88,7 +88,7 @@ const WebView = (props) => {
                 Our pledge is to establish lasting relationships with our customers by exceeding their expectations and
                 gaining their trust through exceptional performance by each member of our service team. We have been
                 providing top service! See just how our UltraFix Appliance Repair Service
-                in Houston can better your life today!
+                can better your life today!
             </div>
             <div style={{width: "100%"}}>
                 <ImageGallery items={images}
@@ -97,7 +97,6 @@ const WebView = (props) => {
                               showFullscreenButton={false}
                               showPlayButton={false}
                               showBullets={true}
-                              // useBrowserFullscreen={true}
                               className={"my-image-gallery"}
                 />
             </div>

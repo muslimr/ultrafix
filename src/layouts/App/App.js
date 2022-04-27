@@ -76,7 +76,7 @@ function Main() {
                                     </button>
                                 </form>
 
-                                <a href="tel:+18329980886" className="call-btn">
+                                <a href="tel:+18889986263" className="call-btn">
                                     <img src="/assets/phone.svg" alt=''/>
                                 </a>
 

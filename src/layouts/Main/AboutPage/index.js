@@ -4,9 +4,10 @@ import MyInput from "../../../components/custom/MyInput";
 import {Tooltip} from "antd";
 import {Button} from "@material-ui/core";
 import {sendDataToClient} from "../../../actions/nodemail";
+import { useLocation } from 'react-router-dom';
 
 
-const AboutPage = ({type = ''}) => {
+const AboutPage = (props) => {
 
     const [state, setState] = useReducer((prevState, newState) => {
             return {...prevState, ...newState}
@@ -19,6 +20,7 @@ const AboutPage = ({type = ''}) => {
                 name: "",
                 phone: "",
                 email: "",
+                message: "Hi, I need help with repair refrigerator",
             },
             listData: [],
             count: 0,
@@ -27,6 +29,11 @@ const AboutPage = ({type = ''}) => {
             offsetRadius: 1,
         }
     );
+
+    const location = useLocation();
+    // const { item } = location.data;
+
+    console.log('@@@@@', location.item);
 
     const [emailTooltipText, setEmailTooltipText] = useState('Click to copy');
 
@@ -141,7 +148,7 @@ const AboutPage = ({type = ''}) => {
                     <img src={`/assets/SVG/email-icon.svg`}
                          style={{width: 20, marginRight: 10}}
                     />
-                    <div style={{fontSize: 18, color: '#fff',}}>info@ultrafixappliance.com</div>
+                    <div style={{fontSize: 18, color: '#fff'}}>info@ultrafixappliance.com</div>
                 </div>
             </Tooltip>
         </div>
