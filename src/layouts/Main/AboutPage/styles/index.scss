@@ -3,6 +3,17 @@
 
 }
 
+
+.label_wrapper {
+  position: absolute;
+  top: 700px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(50px);
+  border: 1px solid #fff;
+  border-radius: 30px;
+}
+
+
 .input_wrapper {
   display: flex;
   padding: 30px;

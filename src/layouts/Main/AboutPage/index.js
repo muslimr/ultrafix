@@ -1,10 +1,11 @@
-import React, {useReducer, useState} from 'react';
+import React, {useEffect, useReducer, useState} from 'react';
 import './styles/index.scss';
 import MyInput from "../../../components/custom/MyInput";
 import {Tooltip} from "antd";
 import {Button} from "@material-ui/core";
 import {sendDataToClient} from "../../../actions/nodemail";
 import { useLocation } from 'react-router-dom';
+import {SERVICES} from "../../../arrays/arrays";
 
 
 const AboutPage = (props) => {
@@ -20,22 +21,39 @@ const AboutPage = (props) => {
                 name: "",
                 phone: "",
                 email: "",
-                message: "Hi, I need help with repair refrigerator",
+                message: "",
             },
             listData: [],
             count: 0,
-            data: [],
+            data: false,
             goToSlide: 0,
             offsetRadius: 1,
         }
     );
 
     const location = useLocation();
-    // const { item } = location.data;
+    let pageSlug = location?.pathname?.split('/')[1];
 
-    console.log('@@@@@', location.item);
+    function getDataBySlug(slug) {
+        let dataFromArray = SERVICES.filter(item => item.value === slug);
+        setState({
+            ...state,
+            data: dataFromArray[0],
+            dataToSend: {
+                ...state.dataToSend,
+                message: `Hi, I need help with repair ${dataFromArray[0]?.title.toLowerCase()}`
+            }
+        });
+    }
+
+
+    useEffect(() => {
+        getDataBySlug(pageSlug);
+    }, []);
+
 
     const [emailTooltipText, setEmailTooltipText] = useState('Click to copy');
+
 
     return(
         <div style={{position: 'relative'}}>
@@ -43,18 +61,9 @@ const AboutPage = (props) => {
                  style={{width: '100%', bottom: 0}}
             />
 
-            <div style={{
-                position: 'absolute',
-                top: 700,
-                background: 'rgba(0, 0, 0, 0.3)',
-                backdropFilter: 'blur(50px)',
-                /* Note: backdrop-filter has minimal browser support */
-                borderRadius: 30,
-            }}>
+            <div className={'label_wrapper'}>
                 <div style={{width : '100%'}}>
-                    <div>
-                        Refrigerators
-                    </div>
+                    <div>{state.data?.title}</div>
                     <div>
                         Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
                     </div>
@@ -63,32 +72,20 @@ const AboutPage = (props) => {
 
             <div style={{display: 'flex'}}>
                 <div style={{color: '#003168', fontSize: 16, lineHeight: 1.4, margin: 45}}>
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
-                    Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                    Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a
-                    Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the
-                    undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
-                    Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the
-                    theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor
-                    sit amet..", comes from a line in section 1.10.32.
-                    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
-                    Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their
-                    exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
-                    Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                    Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a
-                    Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the
-                    undoubtable source.
+                    {state.data?.description}
                 </div>
             </div>
+
+            <div>{JSON.stringify(state.data)}</div>
+
             <div className="input_wrapper" style={{justifyContent: 'space-between'}}>
                 <div className="prices_text_wrapper">
                     <div className="prices_text">Average Price without parts</div>
-                    <div className="prices">$ 165 - 365</div>
+                    <div className="prices">{`$ ${state.data?.price}`}</div>
                 </div>
 
                 <div style={{
-                    padding: 50,
+                    padding: 30,
                     paddingTop: 0,
                     backgroundColor: "#fff",
                     borderRadius: 10,
@@ -99,19 +96,19 @@ const AboutPage = (props) => {
 
                     <div style={{marginBottom: 20}}>
                         <MyInput label={'Full name'}
-                                 value={state.dataToSend.name}
+                                 value={state.dataToSend?.name}
                                  onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, name: e.target.value}})}
                         />
                     </div>
                     <div style={{marginBottom: 20}}>
                         <MyInput label={'Phone (xxx) xxx-xxxx'}
-                                 value={state.dataToSend.phone}
+                                 value={state.dataToSend?.phone}
                                  onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, phone: e.target.value}})}
                         />
                     </div>
                     <div style={{marginBottom: 20}}>
                         <MyInput label={'Address'}
-                                 value={state.dataToSend.address}
+                                 value={state.dataToSend?.address}
                                  onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, address: e.target.value}})}
                         />
                     </div>
@@ -119,14 +116,14 @@ const AboutPage = (props) => {
                     <div style={{marginBottom: 40}}>
                         <MyInput label={'Message'}
                                  multiline
-                                 value={state.dataToSend.message}
+                                 value={state.dataToSend?.message}
                                  onChange={(e) => setState({...state, dataToSend: {...state.dataToSend, message: e.target.value}})}
                         />
                     </div>
 
                     <Button variant="contained"
                             color="primary"
-                            disabled={state.loading}
+                            disabled={!state.dataToSend.address && !state.dataToSend.phone}
                             style={{minWidth: 400, minHeight: 50}}
                             onClick={() => sendDataToClient(state, setState)}
                     >

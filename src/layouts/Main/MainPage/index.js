@@ -58,6 +58,7 @@ const MainPage = () => {
 
     return(
         <div className='d-flex flex-column align-items-center' style={{minHeight: '100vh', }}>
+            <div id={"main"}/>
             <div
                 style={{
                     position: 'relative',
@@ -235,11 +236,13 @@ const MainPage = () => {
                     <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between'}}>
                         {
                             SERVICES.map((item, index) =>
-                                <Link className='service-box-container'
-                                      // to={{
-                                      //     pathname: item.value,
-                                      //     item,
-                                      // }}
+                                <Link
+                                    key={index}
+                                    className='service-box-container'
+                                    to={{
+                                        pathname: item.value,
+                                        // item,
+                                      }}
                                 >
                                     <div className='service-box'>
                                         <MyServiceIcon

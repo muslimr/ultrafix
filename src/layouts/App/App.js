@@ -87,12 +87,12 @@ function Main() {
                         }
 
                         <div style={{width: '100%', zIndex: 100, position: "fixed"}}>
-                            <Link className="logo_" to={'/main'}>
+                            <a className="logo_" href={'#main'}>
                                 {
                                     dimensions.width > 1200 &&
                                     <img src={`/assets/SVG/Ultrafix-logo.svg`} className="img_" />
                                 }
-                            </Link>
+                            </a>
 
                             {
                                 dimensions.width <= 1200

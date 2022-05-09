@@ -10,10 +10,13 @@ export const CATEGORIES = [
 ];
 
 
+
 export const SERVICES = [
     {
+        id: 1,
         title: 'Refrigerator',
         value: 'refrigerator',
+        price: '165 - 365',
         mobIconWidth: 40,
         description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical ' +
             'Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney ' +
@@ -30,8 +33,10 @@ export const SERVICES = [
             'the undoubtable source.',
     },
     {
+        id: 2,
         title: 'Ice Machine',
         value: 'ice_machine',
+        price: '165 - 345',
         mobIconWidth: 40,
         description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical ' +
             'Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney ' +
@@ -48,8 +53,10 @@ export const SERVICES = [
             'the undoubtable source.',
     },
     {
+        id: 3,
         title: 'Washer',
         value: 'washer',
+        price: '145 - 265',
         mobIconWidth: 46,
         description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical ' +
             'Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney ' +
@@ -66,8 +73,10 @@ export const SERVICES = [
             'the undoubtable source.',
     },
     {
+        id: 4,
         title: 'Dryer',
-        value: 'dyer',
+        value: 'dryer',
+        price: '145 - 235',
         mobIconWidth: 46,
         description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical ' +
             'Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney ' +
@@ -84,8 +93,10 @@ export const SERVICES = [
             'the undoubtable source.',
     },
     {
+        id: 5,
         title: 'Dishwasher',
         value: 'dishwasher',
+        price: '145 - 185',
         mobIconWidth: 46,
         description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical ' +
             'Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney ' +
@@ -102,8 +113,10 @@ export const SERVICES = [
             'the undoubtable source.',
     },
     {
+        id: 6,
         title: 'Oven',
         value: 'oven',
+        price: '185 - 315',
         mobIconWidth: 46,
         description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical ' +
             'Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney ' +
@@ -120,8 +133,10 @@ export const SERVICES = [
             'the undoubtable source.',
     },
     {
+        id: 7,
         title: 'Cooktop',
         value: 'cooktop',
+        price: '145 - 285',
         mobIconWidth: 50,
         description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical ' +
             'Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney ' +
@@ -138,8 +153,10 @@ export const SERVICES = [
             'the undoubtable source.',
     },
     {
+        id: 8,
         title: 'Microwave',
         value: 'microwave',
+        price: '145 - 185',
         mobIconWidth: 65,
         description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical ' +
             'Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney ' +
@@ -156,8 +173,10 @@ export const SERVICES = [
             'the undoubtable source.',
     },
     {
+        id: 9,
         title: 'Wine Cooler',
         value: 'wine_cooler',
+        price: '165 - 265',
         mobIconWidth: 40,
         description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical ' +
             'Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney ' +
@@ -174,8 +193,10 @@ export const SERVICES = [
             'the undoubtable source.',
     },
     {
+        id: 10,
         title: 'Freezer',
         value: 'freezer',
+        price: '165 - 285',
         mobIconWidth: 40,
         description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical ' +
             'Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney ' +
