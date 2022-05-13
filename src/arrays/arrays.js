@@ -17,7 +17,7 @@ export const SERVICES = [
         title: 'Refrigerator',
         value: 'refrigerator',
         price: '165 - 365',
-        mobIconWidth: 40,
+        mobIconWidth: 35,
         subTitle: 'Keep your cool with refrigerator repair from our expert technicians',
         description: 'There’s really no point in buying the finest, freshest ingredients if you can’t rely on your refrigerator to store them properly. Not only will the quality of your cooking suffer; you could even get sick if your unit fails to maintain a safe temperature. This makes it very important to get professional refrigerator and freezer repair as soon as you notice any irregularities in your unit’s performance.\n' +
             '\n' +
@@ -28,7 +28,7 @@ export const SERVICES = [
         title: 'Ice Machine',
         value: 'ice_machine',
         price: '165 - 345',
-        mobIconWidth: 40,
+        mobIconWidth: 35,
         subTitle: 'Keep your cool with refrigerator repair from our expert technicians',
         description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical ' +
             'Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney ' +
@@ -49,7 +49,7 @@ export const SERVICES = [
         title: 'Washer',
         value: 'washer',
         price: '145 - 265',
-        mobIconWidth: 46,
+        mobIconWidth: 41,
         subTitle: 'Keep your cool with refrigerator repair from our expert technicians',
         description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical ' +
             'Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney ' +
@@ -70,7 +70,7 @@ export const SERVICES = [
         title: 'Dryer',
         value: 'dryer',
         price: '145 - 235',
-        mobIconWidth: 46,
+        mobIconWidth: 41,
         subTitle: 'Keep your cool with refrigerator repair from our expert technicians',
         description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical ' +
             'Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney ' +
@@ -91,7 +91,7 @@ export const SERVICES = [
         title: 'Dishwasher',
         value: 'dishwasher',
         price: '145 - 185',
-        mobIconWidth: 46,
+        mobIconWidth: 41,
         subTitle: 'Keep your cool with refrigerator repair from our expert technicians',
         description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical ' +
             'Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney ' +
@@ -112,7 +112,7 @@ export const SERVICES = [
         title: 'Oven',
         value: 'oven',
         price: '185 - 315',
-        mobIconWidth: 46,
+        mobIconWidth: 41,
         subTitle: 'Keep your cool with refrigerator repair from our expert technicians',
         description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical ' +
             'Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney ' +
@@ -133,7 +133,7 @@ export const SERVICES = [
         title: 'Cooktop',
         value: 'cooktop',
         price: '145 - 285',
-        mobIconWidth: 50,
+        mobIconWidth: 43,
         subTitle: 'Keep your cool with refrigerator repair from our expert technicians',
         description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical ' +
             'Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney ' +
@@ -154,7 +154,7 @@ export const SERVICES = [
         title: 'Microwave',
         value: 'microwave',
         price: '145 - 185',
-        mobIconWidth: 65,
+        mobIconWidth: 55,
         subTitle: 'Keep your cool with refrigerator repair from our expert technicians',
         description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical ' +
             'Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney ' +
@@ -175,7 +175,7 @@ export const SERVICES = [
         title: 'Wine Cooler',
         value: 'wine_cooler',
         price: '165 - 265',
-        mobIconWidth: 40,
+        mobIconWidth: 35,
         subTitle: 'Keep your cool with refrigerator repair from our expert technicians',
         description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical ' +
             'Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney ' +
@@ -196,7 +196,7 @@ export const SERVICES = [
         title: 'Freezer',
         value: 'freezer',
         price: '165 - 285',
-        mobIconWidth: 40,
+        mobIconWidth: 35,
         subTitle: 'Keep your cool with refrigerator repair from our expert technicians',
         description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical ' +
             'Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney ' +

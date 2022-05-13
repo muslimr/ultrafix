@@ -93,7 +93,6 @@ function Main() {
                                     <img src={`/assets/SVG/Ultrafix-logo.svg`} className="img_" />
                                 }
                             </a>
-
                             {
                                 dimensions.width <= 1200
                                     ? <MySidebar pageRoutes={pageRoutes}/>

@@ -256,10 +256,6 @@ const MainPage = () => {
                 </Container>
             </div>
 
-            {/**  PRICES section  **/}
-            {/*<div id={"prices"} style={{marginBottom: 30}}/>*/}
-            {/*<Prices />*/}
-
             {/**  ABOUT US section  **/}
             <div id={"about"} style={{marginBottom: 25}}/>
             <AboutUs />

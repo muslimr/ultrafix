@@ -8,7 +8,6 @@
   font-weight: 500;
   color: #776490;
   border-radius: 0 0 10px 10px;
-  //background: linear-gradient(90deg, rgba(124, 105, 150, 0) 0%, rgba(124, 105, 150, 0.1) 46.35%, rgba(124, 105, 150, 0) 100%);
   background: rgba(124, 105, 150, 0.1) 46.35%;
 }
 
@@ -111,7 +110,6 @@
   }
 
   .bm_buttons {
-    //margin-top: 3rem;
     display: none;
   }
 }
@@ -190,18 +188,16 @@
     cursor: pointer;
 
     .service-icon {
-      //width: 100px;
       color: #7c91a7;
+    }
 
-      //@media (max-width: 768px) {
-      //  height: 60px;
-      //  width: 50px;
-      //}
+    @media (max-width: 768px) {
+      max-width: 100px;
+      max-height: 100px;
     }
   }
 
   .service-box-label {
-    //position: absolute;
     font-weight: 500;
     font-size: 26px;
     line-height: 30px;
@@ -220,11 +216,8 @@
   &:hover {
     .service-box {
       background: #2079e2;
-      //box-shadow: 0px 2px 30px rgba(37, 131, 240, 0.5);
       border: none;
       transform: translateY(-3%);
-      //box-shadow: 0 7px 7px 0.01rem rgba(58, 164, 224, 0.5);
-      //-webkit-box-shadow: 0 7px 7px 0.01rem rgba(58, 164, 224, 0.5);
       animation: 0.5s ease-in service-box-anim;
 
       .service-icon {
@@ -261,7 +254,6 @@
 @keyframes service-box-anim {
   0% {
     transform: translateY(0%);
-    //box-shadow: 2px 2px 20px 20px #9cc3d7;
   }
   25% {
     transform: translateY(-10%);

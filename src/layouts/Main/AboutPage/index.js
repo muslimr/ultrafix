@@ -105,7 +105,6 @@ const WebView = ({state, setState}) => {
                 </div>
             </div>
 
-
             <img src={`/assets/PNG/services/refrigerators.png`}
                  style={{
                      position: 'absolute',
