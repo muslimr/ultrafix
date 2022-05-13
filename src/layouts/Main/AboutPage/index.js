@@ -6,10 +6,10 @@ import {Button} from "@material-ui/core";
 import {sendDataToClient} from "../../../actions/nodemail";
 import { useLocation } from 'react-router-dom';
 import {SERVICES} from "../../../arrays/arrays";
+import {MyServiceIcon} from "../../../components/custom/MyServiceIcon";
 
 
 const AboutPage = (props) => {
-
     const [state, setState] = useReducer((prevState, newState) => {
             return {...prevState, ...newState}
         }, {
@@ -32,7 +32,7 @@ const AboutPage = (props) => {
     );
 
     const location = useLocation();
-    let pageSlug = location?.pathname?.split('/')[1];
+    let pageSlug = location?.pathname?.split('/about/')[1];
 
     function getDataBySlug(slug) {
         let dataFromArray = SERVICES.filter(item => item.value === slug);
@@ -52,35 +52,70 @@ const AboutPage = (props) => {
     }, []);
 
 
-    const [emailTooltipText, setEmailTooltipText] = useState('Click to copy');
+    return <WebView state={state} setState={setState} />
+}
 
+export default AboutPage;
+
+
+
+
+const WebView = ({state, setState}) => {
+    const [emailTooltipText, setEmailTooltipText] = useState('Click to copy');
 
     return(
         <div style={{position: 'relative'}}>
+            <div style={{position: 'fixed', backgroundColor: 'red', top: 100}}>Go Back</div>
+
             <img src={`/assets/PNG/services/refrigerators.png`}
-                 style={{width: '100%', bottom: 0}}
+                 style={{width: '100%', maxHeight: 500, bottom: 0, objectFit: 'cover'}}
             />
 
-            <div className={'label_wrapper'}>
-                <div style={{width : '100%'}}>
-                    <div>{state.data?.title}</div>
+            <div className="labelWrapper">
+                <div className="titleWrapper">
+                    <MyServiceIcon
+                        name={state.data?.title?.toLowerCase()}
+                        className={'service-icon'}
+                        style={{width: 100, color: '#fff'}}
+                    />
                     <div>
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                        <div className="title">{state.data?.title}</div>
+                        <div className="subTitle">{state.data?.subTitle}</div>
                     </div>
                 </div>
             </div>
 
             <div style={{display: 'flex'}}>
-                <div style={{color: '#003168', fontSize: 16, lineHeight: 1.4, margin: 45}}>
+                <div style={{
+                    color: '#003168',
+                    fontSize: 16,
+                    lineHeight: 1.4,
+                    margin: '0px 101px 50px 101px',
+                    padding: '90px 60px 50px 60px',
+                    borderRadius: '20px',
+                    boxShadow: '0px 2px 30px rgba(0, 0, 0, 0.15)',
+                }}>
                     {state.data?.description}
                 </div>
             </div>
 
-            <div>{JSON.stringify(state.data)}</div>
+
+            <img src={`/assets/PNG/services/refrigerators.png`}
+                 style={{
+                     position: 'absolute',
+                     width: '100%',
+                     marginRight: 100,
+                     marginLeft: 100,
+                     maxHeight: 500,
+                     bottom: 0,
+                     borderRadius: 20,
+                     objectFit: 'cover',
+                 }}
+            />
 
             <div className="input_wrapper" style={{justifyContent: 'space-between'}}>
                 <div className="prices_text_wrapper">
-                    <div className="prices_text">Average Price without parts</div>
+                    <div className="prices_text">{`Average price for ${state.data?.title?.toLowerCase()} repair without parts`}</div>
                     <div className="prices">{`$ ${state.data?.price}`}</div>
                 </div>
 
@@ -151,5 +186,3 @@ const AboutPage = (props) => {
         </div>
     );
 }
-
-export default AboutPage;

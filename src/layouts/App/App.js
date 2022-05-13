@@ -24,12 +24,12 @@ function Main() {
 
 
     const pageRoutes = [
-        {label: 'Services', route: '#services'},
-        {label: 'About Us', route: '#about'},
-        {label: 'Brands', route: '#brands'},
-        {label: 'Reviews', route: '#reviews'},
-        {label: 'Contact Us', route: '#contact'},
-        {label: 'Why Us', route: '#whyus'},
+        {label: 'Services', route: '/main/#services'},
+        {label: 'About Us', route: '/main/#about'},
+        {label: 'Brands', route: '/main/#brands'},
+        {label: 'Reviews', route: '/main/#reviews'},
+        {label: 'Contact Us', route: '/main/#contact'},
+        {label: 'Why Us', route: '/main/#whyus'},
     ];
 
 
@@ -87,7 +87,7 @@ function Main() {
                         }
 
                         <div style={{width: '100%', zIndex: 100, position: "fixed"}}>
-                            <a className="logo_" href={'#main'}>
+                            <a className="logo_" href={'/main/#main'}>
                                 {
                                     dimensions.width > 1200 &&
                                     <img src={`/assets/SVG/Ultrafix-logo.svg`} className="img_" />

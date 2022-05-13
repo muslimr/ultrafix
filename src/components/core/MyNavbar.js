@@ -52,11 +52,9 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.background.paper,
     },
     demo2: {
-        // display: "flex",
         marginTop: 10,
         paddingBottom: 15,
         paddingTop: 15,
-        // backgroundColor: '#2e1534',
     },
 }));
 

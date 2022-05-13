@@ -33,7 +33,7 @@ function App() {
                              color: '#fff',
                              width: '100%',
                              minHeight: 80,
-                             padding: breakpoint === "sm" ? "25px 25px 100px 25px" : 40,
+                             padding: breakpoint === "sm" ? "25px 25px 100px 25px" : '20px 40px',
                              paddingBottom: breakpoint === "sm" ? 100 : 30,
                              background: '#003168'
                          }}

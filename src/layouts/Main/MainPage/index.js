@@ -236,13 +236,10 @@ const MainPage = () => {
                     <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between'}}>
                         {
                             SERVICES.map((item, index) =>
-                                <Link
+                                <a
                                     key={index}
                                     className='service-box-container'
-                                    to={{
-                                        pathname: item.value,
-                                        // item,
-                                      }}
+                                    href={`/about/${item.value}`}
                                 >
                                     <div className='service-box'>
                                         <MyServiceIcon
@@ -252,7 +249,7 @@ const MainPage = () => {
                                         />
                                     </div>
                                     <div className='service-box-label'>{item?.title}</div>
-                                </Link>
+                                </a>
                             )
                         }
                     </div>
