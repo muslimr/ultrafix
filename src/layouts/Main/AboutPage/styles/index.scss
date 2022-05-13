@@ -3,6 +3,27 @@
 
 }
 
+.goBackIcon {
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  top: 110px;
+  left: 30px;
+  background: rgba(0, 59, 100, 0.3);
+  backdrop-filter: blur(50px);
+  border-radius: 50px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #2583F0;
+  }
+}
 
 .labelWrapper {
   position: absolute;

@@ -69,14 +69,14 @@ export default function MyNavbar(props) {
         setValue(newValue);
     };
 
+
     useEffect(() => {
         for (let index in pageRoutes) {
-            if (pageRoutes[index].route === history.location.hash) {
+            if (pageRoutes[index].route === `${history.location.pathname}${history.location.hash}`) {
                 setValue(parseInt(index));
             }
         }
     }, [history.location.hash]);
-
 
 
     return (

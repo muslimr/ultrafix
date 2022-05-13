@@ -4,9 +4,10 @@ import MyInput from "../../../components/custom/MyInput";
 import {Tooltip} from "antd";
 import {Button} from "@material-ui/core";
 import {sendDataToClient} from "../../../actions/nodemail";
-import { useLocation } from 'react-router-dom';
+import {useHistory, useLocation} from 'react-router-dom';
 import {SERVICES} from "../../../arrays/arrays";
 import {MyServiceIcon} from "../../../components/custom/MyServiceIcon";
+import {GoBackIcon} from "../../../assets/icons/GoBackIcon";
 
 
 const AboutPage = (props) => {
@@ -32,6 +33,7 @@ const AboutPage = (props) => {
     );
 
     const location = useLocation();
+    const {history} = useHistory();
     let pageSlug = location?.pathname?.split('/about/')[1];
 
     function getDataBySlug(slug) {
@@ -52,7 +54,7 @@ const AboutPage = (props) => {
     }, []);
 
 
-    return <WebView state={state} setState={setState} />
+    return <WebView state={state} setState={setState} history={history}/>
 }
 
 export default AboutPage;
@@ -63,9 +65,13 @@ export default AboutPage;
 const WebView = ({state, setState}) => {
     const [emailTooltipText, setEmailTooltipText] = useState('Click to copy');
 
+    const history = useHistory();
+
     return(
         <div style={{position: 'relative'}}>
-            <div style={{position: 'fixed', backgroundColor: 'red', top: 100}}>Go Back</div>
+            <div className="goBackIcon" onClick={() => history.goBack()}>
+                <GoBackIcon style={{color: '#fff', cursor: 'pointer'}} />
+            </div>
 
             <img src={`/assets/PNG/services/refrigerators.png`}
                  style={{width: '100%', maxHeight: 500, bottom: 0, objectFit: 'cover'}}
