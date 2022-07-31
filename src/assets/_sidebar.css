@@ -24,6 +24,6 @@
   height: 80px;
   bottom: 0;
   color: #fff;
-  background-color: rgba(0,0,0,0.2);
+  background: rgba(0, 59, 100, 0.1);
   backdrop-filter: blur(20px);
 }
