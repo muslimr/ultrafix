@@ -74,7 +74,7 @@ const WebView = ({state, setState, history}) => {
                 <GoBackIcon style={{color: '#fff', cursor: 'pointer'}}/>
             </div>
 
-            <img src={`/assets/PNG/services/refrigerators.png`}
+            <img src={`/assets/PNG/services/${state.data?.value}s.png`}
                  className="coverImage"
             />
 
@@ -92,21 +92,22 @@ const WebView = ({state, setState, history}) => {
                 </div>
             </div>
 
-            <div style={{display: 'flex'}}>
-                <div style={{
-                    color: '#003168',
-                    fontSize: 16,
-                    lineHeight: 1.4,
-                    margin: '0px 101px 50px 101px',
-                    padding: '90px 60px 50px 60px',
-                    borderRadius: '20px',
-                    boxShadow: '0px 2px 30px rgba(0, 0, 0, 0.15)',
-                }}>
+            <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                margin: '0px 101px 50px 101px',
+                boxShadow: '0px 2px 30px rgba(0, 0, 0, 0.15)',
+                borderRadius: '0 0 20px 20px',
+                fontSize: 16,
+                lineHeight: 1.4,
+            }}>
+                <div style={{color: '#003168', padding: '40px 50px 30px 50px',}}>
                     {state.data?.description}
                 </div>
+                <div className="note">{state.data?.note}</div>
             </div>
 
-            <img src={`/assets/PNG/services/refrigerators.png`}
+            <img src={`/assets/PNG/services/${state.data?.value}s.png`}
                  style={{
                      position: 'absolute',
                      width: '100%',
@@ -121,8 +122,7 @@ const WebView = ({state, setState, history}) => {
 
             <div className="input_wrapper" style={{justifyContent: 'space-between'}}>
                 <div className="prices_text_wrapper">
-                    <div
-                        className="prices_text">{`Average price for ${state.data?.title?.toLowerCase()} repair without parts`}</div>
+                    <div className="prices_text">{`Average price for ${state.data?.title?.toLowerCase()} repair without parts`}</div>
                     <div className="prices">{`$ ${state.data?.price}`}</div>
                 </div>
 
@@ -218,14 +218,13 @@ const WebView = ({state, setState, history}) => {
 const MobView = ({state, setState, history}) => {
     const [emailTooltipText, setEmailTooltipText] = useState('Click to copy');
 
-
     return (
         <div style={{position: 'relative'}}>
             <div className="goBackIcon" onClick={() => history.goBack()}>
                 <GoBackIcon style={{color: '#fff', cursor: 'pointer'}}/>
             </div>
 
-            <img src={`/assets/PNG/services/refrigerators.png`}
+            <img src={`/assets/PNG/services/${state.data?.value}s.png`}
                  className="coverImage"
                  style={{marginTop: 60}}
             />
@@ -243,18 +242,17 @@ const MobView = ({state, setState, history}) => {
                     </div>
                 </div>
 
-                <div style={{display: 'flex'}}>
+                <div style={{display: 'flex', paddingBottom: 20}}>
                     {state.data?.description}
                 </div>
+                <div className="note">{state.data?.note}</div>
             </div>
 
-            <img src={`/assets/PNG/services/refrigerators.png`}
+            <img src={`/assets/PNG/services/${state.data?.value}s.png`}
                  style={{
                      position: 'absolute',
                      width: '100%',
-                     marginRight: 100,
-                     marginLeft: 100,
-                     maxHeight: 500,
+                     height: 700,
                      bottom: 0,
                      borderRadius: 20,
                      objectFit: 'cover',
@@ -262,25 +260,27 @@ const MobView = ({state, setState, history}) => {
             />
 
             <div className="input_wrapper" style={{justifyContent: 'space-between'}}>
-                {/*<div className="prices_text_wrapper">*/}
-                {/*    <div*/}
-                {/*        className="prices_text">{`Average price for ${state.data?.title?.toLowerCase()} repair without parts`}</div>*/}
-                {/*    <div className="prices">{`$ ${state.data?.price}`}</div>*/}
-                {/*</div>*/}
+                <div className="prices_text_wrapper">
+                    <div className="prices_text">{`Average price for ${state.data?.title?.toLowerCase()} repair without parts`}</div>
+                    <div className="prices">{`$ ${state.data?.price}`}</div>
+                </div>
 
                 <div style={{
+                    marginTop: 10,
+                    marginBottom: 30,
                     padding: 30,
                     paddingTop: 0,
-                    // backgroundColor: "#fff",
+                    backgroundColor: "#fff",
                     borderRadius: 10,
+                    width: '100%',
                 }}>
                     <div style={{
-                        fontSize: "1.5rem",
-                        lineHeight: 1.1,
-                        marginTop: 70,
+                        fontSize: "1.1rem",
+                        lineHeight: 1,
+                        marginTop: 30,
                         marginBottom: 20,
                         fontWeight: 500,
-                        textAlign: "end",
+                        textAlign: "start",
                         color: '#8B9CB6'
                     }}>
                         Submit a Service Request
@@ -329,7 +329,7 @@ const MobView = ({state, setState, history}) => {
                     <Button variant="contained"
                             color="primary"
                             disabled={!state.dataToSend.address && !state.dataToSend.phone}
-                            // style={{minWidth: 400, minHeight: 50}}
+                            style={{width: '100%', height: 50}}
                             onClick={() => sendDataToClient(state, setState)}
                     >
                         Send
