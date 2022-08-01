@@ -73,7 +73,7 @@ export const SERVICES = [
         mobIconWidth: 41,
         subTitle: 'Your dryer will work better and more efficiently',
         description:
-            'Does your dry not completely dry your clothes? We understand that you need your clothes dryer to complete your laundry. ' +
+            'Does your dryer not completely dry your clothes? We understand that you need your clothes dryer to complete your laundry. ' +
             'Call the experts at UltraFix Appliance Repair Service for help. We have a staff of trained appliance specialist ready to ' +
             'take your call. We’ll dispatch a licensed appliance repair technician to your home or business where they will analyze ' +
             'your malfunctioning dryer. Our appliance repair techs will find out why your appliance is not working properly. ' +
