@@ -71,7 +71,7 @@ export const SERVICES = [
         value: 'dryer',
         price: '145 - 235',
         mobIconWidth: 41,
-        subTitle: 'Your drier will work better and more efficiently',
+        subTitle: 'Your dryer will work better and more efficiently',
         description:
             'Does your dry not completely dry your clothes? We understand that you need your clothes dryer to complete your laundry. ' +
             'Call the experts at UltraFix Appliance Repair Service for help. We have a staff of trained appliance specialist ready to ' +

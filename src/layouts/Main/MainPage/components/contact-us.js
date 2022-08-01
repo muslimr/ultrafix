@@ -3,6 +3,7 @@ import {Button} from "@material-ui/core";
 import React, {useReducer} from "react";
 import {useWindowDimensions} from "../../../../hooks";
 import {sendDataToClient} from "../../../../actions/nodemail";
+import DividerLine from "../../../../components/custom/DividerLine";
 
 
 export default function ContactUs (props) {
@@ -53,11 +54,22 @@ const MobView = (props) => {
                  position: 'relative',
                  width: '100%',
                  minHeight: 200,
-                 background: '#fff',
-                 padding: 30,
+                 backgroundColor: '#EFF2F4',
              }}
         >
-            <div style={{color: "#003168"}}>
+            <div style={{width: '100%', marginLeft: 50, marginTop: 30, marginBottom: 10}}>
+                <div style={{
+                    fontSize: 30,
+                    fontWeight: 600,
+                    color: '#003168',
+                    width: '100%',
+                }}>
+                    Contact Us
+                </div>
+                <DividerLine color={'#D2D2D2'}/>
+            </div>
+
+            <div style={{color: "#003168", margin: 30}}>
                 <div className="d-flex justify-content-end mb-4">
                     <img src={`/assets/SVG/5stars.svg`} style={{width: 200, marginTop: 10}} />
                 </div>
@@ -72,21 +84,22 @@ const MobView = (props) => {
                     Call Us Now
                 </div>
                 <div style={{fontSize: "2rem", textAlign: "end", marginBottom: 30,}}>
-                    <img src={`/assets/SVG/calling-phone.svg`} style={{width: 35, marginRight: 15, marginBottom: 10}}/>
+                    {/*<img src={`/assets/SVG/calling-phone.svg`} style={{width: 35, marginRight: 15, marginBottom: 10}}/>*/}
                     (888) 998-6263
-                </div>
-
-                <div style={{fontSize: "1.5rem", lineHeight: 1.1, marginTop: 70, marginBottom: 20, fontWeight: 500, textAlign: "end", color: '#8B9CB6'}}>
-                    Submit a Service Request
                 </div>
             </div>
             <div style={{
-                width: "100%",
-                // padding: 25,
+                width: '90%',
+                padding: 15,
                 backgroundColor: "#fff",
                 borderRadius: 10,
-                marginBottom: 10,
+                boxShadow: '0px 2px 30px rgba(0, 0, 0, 0.15)',
+                margin: 10,
+                marginBottom: 30,
             }}>
+                <div style={{fontSize: "1.5rem", lineHeight: 1.1, marginTop: 70, marginBottom: 20, fontWeight: 500, textAlign: "end", color: '#8B9CB6'}}>
+                    Submit a Service Request
+                </div>
                 <div style={{marginBottom: 20}}>
                     <MyInput label={'Full name'}
                              // containerStyle={{minWidth: 400}}
@@ -140,12 +153,25 @@ const WebView = (props) => {
     return(
         <div className='d-flex align-items-center justify-content-center'
              style={{
+                 flexDirection: 'column',
                  position: 'relative',
                  width: '100%',
                  minHeight: "90vh",
-                 background: '#fff',
+                 backgroundColor: '#EFF2F4',
              }}
         >
+            <div style={{width: '100%', paddingLeft: 100, marginTop: 50}}>
+                <div style={{
+                    fontSize: 42,
+                    fontWeight: 500,
+                    color: '#003168',
+                    width: '100%',
+                }}>
+                    Contact Us
+                </div>
+                <DividerLine color={'#D2D2D2'}/>
+            </div>
+
             <div className='d-flex align-items-center justify-content-between'
                  style={{
                      position: 'relative',

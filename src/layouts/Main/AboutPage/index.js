@@ -110,10 +110,7 @@ const WebView = ({state, setState, history}) => {
             <img src={`/assets/PNG/services/${state.data?.value}s.png`}
                  style={{
                      position: 'absolute',
-                     width: '100%',
-                     marginRight: 100,
-                     marginLeft: 100,
-                     maxHeight: 500,
+                     maxHeight: 600,
                      bottom: 0,
                      borderRadius: 20,
                      objectFit: 'cover',
