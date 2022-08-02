@@ -22,7 +22,7 @@ const AboutPage = (props) => {
             dataToSend: {
                 name: "",
                 phone: "",
-                email: "",
+                address: "",
                 message: "",
             },
             listData: [],
